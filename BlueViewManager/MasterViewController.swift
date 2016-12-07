@@ -18,7 +18,6 @@ class MasterViewController: UITableViewController {
     @IBAction func signOut(_ sender: AnyObject) {
         do {
             try FIRAuth.auth()?.signOut()
-            navigationController?.popViewController(animated: true)
         }
         catch let signOutError as NSError {
             print("Error signing out: %@", signOutError)
@@ -53,6 +52,10 @@ class MasterViewController: UITableViewController {
                 
                 let changeRequest = user.profileChangeRequest()
                 let username = user.email
+                var role = "user"
+                if(username == "blueviewaquatics@gmail.com") {
+                    role = "admin"
+                }
                 changeRequest.displayName = username
                 
                 // Commit profile changes to server
@@ -64,8 +67,9 @@ class MasterViewController: UITableViewController {
                     }
                     
                     // [START basic_write]
-                    let bridgedString = NSString(string:username!)
-                    self.ref.child("users").child(user.uid).setValue(["userName": bridgedString])
+                    let usernameBridged = NSString(string:username!)
+                    let roleBridged = NSString(string:role)
+                    self.ref.child("users").child(user.uid).setValue(["userName": usernameBridged, "role" : roleBridged])
                     // [END basic_write]
                 }
             }

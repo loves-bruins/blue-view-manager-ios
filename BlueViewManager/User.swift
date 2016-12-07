@@ -11,14 +11,15 @@ import UIKit
 class User: NSObject {
     var uid: String
     var userName: String
-    
-    init(uid: String, userName: String)
+    var role: String
+    init(uid: String, userName: String, role: String)
     {
+        self.role = role
         self.uid = uid
         self.userName = userName
     }
     
     convenience override init() {
-        self.init(uid: "", userName: "")
+        self.init(uid: "", userName: "", role: "user")
     }
 }

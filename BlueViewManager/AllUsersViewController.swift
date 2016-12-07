@@ -44,6 +44,7 @@ class AllUsersViewController: UIViewController, UITableViewDelegate {
                 return
             }
             cell.username.text = user.userName
+            cell.role.text = user.role
         }
         
         tableView.dataSource = dataSource

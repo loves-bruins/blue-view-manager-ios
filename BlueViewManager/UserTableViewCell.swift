@@ -11,4 +11,5 @@ import UIKit
 class UserTableViewCell: UITableViewCell {
     @IBOutlet weak var username: UILabel!
 
+    @IBOutlet weak var role: UILabel!
 }

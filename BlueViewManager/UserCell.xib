@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,19 +17,31 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y65-JG-Nig">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="183" id="eNc-C7-i2p"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="NUF-XT-F5p">
+                        <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="Y65-JG-Nig" secondAttribute="trailing" id="Bn2-ns-5Gc"/>
-                    <constraint firstItem="Y65-JG-Nig" firstAttribute="top" secondItem="QVf-z3-2RT" secondAttribute="top" id="JxB-8l-mux"/>
-                    <constraint firstItem="Y65-JG-Nig" firstAttribute="leading" secondItem="QVf-z3-2RT" secondAttribute="leading" constant="8" id="bia-tr-zez"/>
-                    <constraint firstAttribute="bottom" secondItem="Y65-JG-Nig" secondAttribute="bottom" id="kKA-Vf-Prb"/>
+                    <constraint firstItem="NUF-XT-F5p" firstAttribute="leading" secondItem="Y65-JG-Nig" secondAttribute="trailing" constant="13" id="6HL-ra-gyH"/>
+                    <constraint firstItem="Y65-JG-Nig" firstAttribute="top" secondItem="QVf-z3-2RT" secondAttribute="topMargin" constant="3" id="NM9-I3-dRC"/>
+                    <constraint firstItem="NUF-XT-F5p" firstAttribute="trailing" secondItem="QVf-z3-2RT" secondAttribute="trailingMargin" id="OPl-ht-AJx"/>
+                    <constraint firstItem="Y65-JG-Nig" firstAttribute="leading" secondItem="QVf-z3-2RT" secondAttribute="leadingMargin" id="Sh6-MK-ShQ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Y65-JG-Nig" secondAttribute="bottom" constant="3" id="gjv-j7-la2"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="NUF-XT-F5p" secondAttribute="bottom" constant="3" id="hgQ-2g-rQn"/>
+                    <constraint firstItem="NUF-XT-F5p" firstAttribute="top" secondItem="QVf-z3-2RT" secondAttribute="topMargin" constant="3" id="krJ-5E-aDh"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="role" destination="NUF-XT-F5p" id="C2e-DP-1KS"/>
                 <outlet property="username" destination="Y65-JG-Nig" id="H6k-vr-JRk"/>
             </connections>
             <point key="canvasLocation" x="143.5" y="271"/>
