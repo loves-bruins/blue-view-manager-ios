@@ -28,11 +28,12 @@ class AllUsersViewController: UIViewController, UITableViewDelegate {
         // [START create_database_reference]
         ref = FIRDatabase.database().reference()
         // [END create_database_reference]
+        self.tableView.register(UINib(nibName: "UserCell", bundle: nil), forCellReuseIdentifier: "user")
         
         dataSource = FirebaseTableViewDataSource.init(query: getQuery(),
                                                       modelClass: User.self,
                                                       nibNamed: "UserCell",
-                                                      cellReuseIdentifier: "UserCell",
+                                                      cellReuseIdentifier: "user",
                                                       view: self.tableView)
         
         dataSource?.populateCell() {
@@ -63,7 +64,7 @@ class AllUsersViewController: UIViewController, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return 100
     }
     
     func getUid() -> String {
@@ -71,7 +72,8 @@ class AllUsersViewController: UIViewController, UITableViewDelegate {
     }
     
     func getQuery() -> FIRDatabaseQuery {
-        return self.ref
+        let usersQuery = (ref?.child("users").queryLimited(toFirst: 100))!
+        return usersQuery
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="UserCell" id="tpW-aL-nvh" customClass="UserTableViewCell" customModule="BlueViewManager" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="user" id="tpW-aL-nvh" customClass="UserTableViewCell" customModule="BlueViewManager" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tpW-aL-nvh" id="QVf-z3-2RT">
@@ -29,7 +29,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="username" destination="Y65-JG-Nig" id="oxU-dS-GTz"/>
+                <outlet property="username" destination="Y65-JG-Nig" id="H6k-vr-JRk"/>
             </connections>
             <point key="canvasLocation" x="143.5" y="271"/>
         </tableViewCell>

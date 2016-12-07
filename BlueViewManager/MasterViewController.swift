@@ -18,6 +18,7 @@ class MasterViewController: UITableViewController {
     @IBAction func signOut(_ sender: AnyObject) {
         do {
             try FIRAuth.auth()?.signOut()
+            navigationController?.popViewController(animated: true)
         }
         catch let signOutError as NSError {
             print("Error signing out: %@", signOutError)

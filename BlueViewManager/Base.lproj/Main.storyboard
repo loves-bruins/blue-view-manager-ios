@@ -11,7 +11,7 @@
         <scene sceneID="pY4-Hu-kfo">
             <objects>
                 <navigationController title="Master" id="RMx-3f-FxP" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Pmd-2v-anx">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" id="Pmd-2v-anx">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -272,7 +272,7 @@
         <scene sceneID="r7l-gg-dq7">
             <objects>
                 <navigationController id="vC3-pB-5Vb" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="DjV-YW-jjY">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" id="DjV-YW-jjY">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -312,12 +312,6 @@
                                     <action selector="onSignIn:" destination="d6B-FZ-vOV" eventType="touchUpInside" id="MX0-Hy-0JW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bvk-vW-KSJ">
-                                <state key="normal" title="Sign Up"/>
-                                <connections>
-                                    <segue destination="Fob-2b-QVN" kind="presentation" id="zOd-CQ-yz3"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -325,9 +319,6 @@
                             <constraint firstItem="ZkE-Vl-Tk9" firstAttribute="leading" secondItem="xtt-8A-TcZ" secondAttribute="leadingMargin" constant="48" id="7xZ-w7-Xyz"/>
                             <constraint firstItem="hLj-YS-FyM" firstAttribute="top" secondItem="mmR-GY-iwn" secondAttribute="bottom" constant="20" id="Ct8-vJ-toV"/>
                             <constraint firstItem="ZkE-Vl-Tk9" firstAttribute="top" secondItem="hLj-YS-FyM" secondAttribute="bottom" constant="20" id="KrF-OO-Ohs"/>
-                            <constraint firstItem="Bvk-vW-KSJ" firstAttribute="top" secondItem="ZkE-Vl-Tk9" secondAttribute="bottom" constant="20" id="QKZ-OB-bIN"/>
-                            <constraint firstItem="Bvk-vW-KSJ" firstAttribute="leading" secondItem="xtt-8A-TcZ" secondAttribute="leadingMargin" constant="44" id="WMK-2l-92V"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Bvk-vW-KSJ" secondAttribute="trailing" constant="44" id="XOX-ST-BX0"/>
                             <constraint firstItem="hLj-YS-FyM" firstAttribute="top" secondItem="mmR-GY-iwn" secondAttribute="bottom" constant="20" id="Yxv-Zw-H9A"/>
                             <constraint firstItem="mmR-GY-iwn" firstAttribute="top" secondItem="3P4-hp-vZD" secondAttribute="bottom" constant="90" id="dre-4R-DoP"/>
                             <constraint firstItem="mmR-GY-iwn" firstAttribute="leading" secondItem="xtt-8A-TcZ" secondAttribute="leadingMargin" constant="48" id="ge5-Dv-rGz"/>
@@ -498,8 +489,13 @@
                             <constraint firstItem="y2Z-mU-4N4" firstAttribute="top" secondItem="BPq-2t-Fal" secondAttribute="bottom" id="vUn-39-QcY"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="All Users (admin)" id="MpV-Ga-HHW">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="v5i-mf-nYb"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="tableView" destination="BPq-2t-Fal" id="z7E-Ta-en8"/>
+                        <outlet property="tableView" destination="BPq-2t-Fal" id="4M1-C6-Qzk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rwL-XP-dt3" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -9,16 +9,16 @@
 import UIKit
 
 class User: NSObject {
+    var uid: String
     var userName: String
-    var email: String
     
-    init(userName: String, email: String)
+    init(uid: String, userName: String)
     {
+        self.uid = uid
         self.userName = userName
-        self.email = email
     }
     
     convenience override init() {
-        self.init(userName: "", email: "")
+        self.init(uid: "", userName: "")
     }
 }
