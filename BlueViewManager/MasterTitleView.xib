@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MasterTitleView" customModule="BlueViewManager" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BxN-rN-tBg">
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0S-7L-dMX">
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="p0S-7L-dMX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2kv-Ow-yf3"/>
+                <constraint firstItem="BxN-rN-tBg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="DDk-7P-nqg"/>
+                <constraint firstItem="p0S-7L-dMX" firstAttribute="top" secondItem="BxN-rN-tBg" secondAttribute="bottom" constant="4" id="JVs-kI-qNS"/>
+                <constraint firstAttribute="trailing" secondItem="p0S-7L-dMX" secondAttribute="trailing" id="euT-Cw-jKw"/>
+                <constraint firstItem="BxN-rN-tBg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="sbV-nt-V7e"/>
+                <constraint firstAttribute="trailing" secondItem="BxN-rN-tBg" secondAttribute="trailing" id="tR1-OW-Tnd"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="applicationTitle" destination="BxN-rN-tBg" id="t3p-vd-OqF"/>
+                <outlet property="loggedInUser" destination="p0S-7L-dMX" id="3wV-KD-b9b"/>
+            </connections>
+        </view>
+    </objects>
+</document>
