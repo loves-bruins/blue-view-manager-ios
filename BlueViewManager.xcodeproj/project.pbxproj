@@ -15,6 +15,7 @@
 		A304442A1DF629A7009D9218 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30444291DF629A7009D9218 /* User.swift */; };
 		A304442C1DF62A50009D9218 /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A304442B1DF62A50009D9218 /* Purchase.swift */; };
 		A304442E1DF62B7F009D9218 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = A304442D1DF62B7F009D9218 /* Service.swift */; };
+		A3A6EF461DF8E53200D98BED /* AddCycleTestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A6EF451DF8E53200D98BED /* AddCycleTestTableViewController.swift */; };
 		A3C6A52C1DF1C29F00C622D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C6A52B1DF1C29F00C622D4 /* AppDelegate.swift */; };
 		A3C6A52E1DF1C29F00C622D4 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C6A52D1DF1C29F00C622D4 /* MasterViewController.swift */; };
 		A3C6A5301DF1C29F00C622D4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C6A52F1DF1C29F00C622D4 /* DetailViewController.swift */; };
@@ -27,6 +28,11 @@
 		A3D039531DF7B18600100887 /* AllUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D039521DF7B18600100887 /* AllUsersViewController.swift */; };
 		A3D039551DF7B27500100887 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D039541DF7B27500100887 /* UserTableViewCell.swift */; };
 		A3D039571DF7B98800100887 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3D039561DF7B98800100887 /* UserCell.xib */; };
+		A3D039591DF89BD600100887 /* CycleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D039581DF89BD500100887 /* CycleTest.swift */; };
+		A3D0395B1DF89E7100100887 /* AdminFunctions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3D0395A1DF89E7100100887 /* AdminFunctions.storyboard */; };
+		A3D0395E1DF8A31A00100887 /* CycleTestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0395C1DF8A31A00100887 /* CycleTestTableViewCell.swift */; };
+		A3D0395F1DF8A31A00100887 /* CycleTestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3D0395D1DF8A31A00100887 /* CycleTestTableViewCell.xib */; };
+		A3D039611DF8BA5D00100887 /* CycleTestsPerUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D039601DF8BA5D00100887 /* CycleTestsPerUserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +46,7 @@
 		A30444291DF629A7009D9218 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A304442B1DF62A50009D9218 /* Purchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
 		A304442D1DF62B7F009D9218 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		A3A6EF451DF8E53200D98BED /* AddCycleTestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCycleTestTableViewController.swift; sourceTree = "<group>"; };
 		A3C6A5281DF1C29F00C622D4 /* BlueViewManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueViewManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C6A52B1DF1C29F00C622D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3C6A52D1DF1C29F00C622D4 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +64,11 @@
 		A3D039521DF7B18600100887 /* AllUsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllUsersViewController.swift; sourceTree = "<group>"; };
 		A3D039541DF7B27500100887 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		A3D039561DF7B98800100887 /* UserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		A3D039581DF89BD500100887 /* CycleTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleTest.swift; sourceTree = "<group>"; };
+		A3D0395A1DF89E7100100887 /* AdminFunctions.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AdminFunctions.storyboard; sourceTree = "<group>"; };
+		A3D0395C1DF8A31A00100887 /* CycleTestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleTestTableViewCell.swift; sourceTree = "<group>"; };
+		A3D0395D1DF8A31A00100887 /* CycleTestTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CycleTestTableViewCell.xib; sourceTree = "<group>"; };
+		A3D039601DF8BA5D00100887 /* CycleTestsPerUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleTestsPerUserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +106,7 @@
 				A30444291DF629A7009D9218 /* User.swift */,
 				A304442B1DF62A50009D9218 /* Purchase.swift */,
 				A304442D1DF62B7F009D9218 /* Service.swift */,
+				A3D039581DF89BD500100887 /* CycleTest.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -120,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				A3D039541DF7B27500100887 /* UserTableViewCell.swift */,
+				A3D0395C1DF8A31A00100887 /* CycleTestTableViewCell.swift */,
 				A3D039511DF7197300100887 /* UI */,
 				A30444281DF6298D009D9218 /* Model */,
 				A3C6A5441DF2020900C622D4 /* LoginViewController.swift */,
@@ -137,6 +151,8 @@
 				A30444201DF3644C009D9218 /* SignupViewController.swift */,
 				A30444261DF5CA58009D9218 /* MasterTitleView.swift */,
 				A3D039521DF7B18600100887 /* AllUsersViewController.swift */,
+				A3D039601DF8BA5D00100887 /* CycleTestsPerUserViewController.swift */,
+				A3A6EF451DF8E53200D98BED /* AddCycleTestTableViewController.swift */,
 			);
 			path = BlueViewManager;
 			sourceTree = "<group>";
@@ -148,6 +164,8 @@
 				A3C6A5361DF1C29F00C622D4 /* LaunchScreen.storyboard */,
 				A30444241DF5C900009D9218 /* MasterTitleView.xib */,
 				A3D039561DF7B98800100887 /* UserCell.xib */,
+				A3D0395A1DF89E7100100887 /* AdminFunctions.storyboard */,
+				A3D0395D1DF8A31A00100887 /* CycleTestTableViewCell.xib */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -223,10 +241,12 @@
 			files = (
 				A3C6A5381DF1C29F00C622D4 /* LaunchScreen.storyboard in Resources */,
 				A3C6A5411DF1D1AB00C622D4 /* GoogleService-Info.plist in Resources */,
+				A3D0395B1DF89E7100100887 /* AdminFunctions.storyboard in Resources */,
 				A304441F1DF34DA3009D9218 /* Images.xcassets in Resources */,
 				A30444251DF5C900009D9218 /* MasterTitleView.xib in Resources */,
 				A3C6A5351DF1C29F00C622D4 /* Assets.xcassets in Resources */,
 				A3C6A5331DF1C29F00C622D4 /* Main.storyboard in Resources */,
+				A3D0395F1DF8A31A00100887 /* CycleTestTableViewCell.xib in Resources */,
 				A3D039571DF7B98800100887 /* UserCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,15 +306,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3A6EF461DF8E53200D98BED /* AddCycleTestTableViewController.swift in Sources */,
 				A3D039531DF7B18600100887 /* AllUsersViewController.swift in Sources */,
 				A30444211DF3644C009D9218 /* SignupViewController.swift in Sources */,
 				A3C6A5301DF1C29F00C622D4 /* DetailViewController.swift in Sources */,
+				A3D039591DF89BD600100887 /* CycleTest.swift in Sources */,
 				A304442C1DF62A50009D9218 /* Purchase.swift in Sources */,
 				A3D039551DF7B27500100887 /* UserTableViewCell.swift in Sources */,
+				A3D0395E1DF8A31A00100887 /* CycleTestTableViewCell.swift in Sources */,
 				A3C6A54F1DF226C400C622D4 /* UIViewController+Alerts.m in Sources */,
 				A3C6A5451DF2020900C622D4 /* LoginViewController.swift in Sources */,
 				A304442A1DF629A7009D9218 /* User.swift in Sources */,
 				A3C6A52E1DF1C29F00C622D4 /* MasterViewController.swift in Sources */,
+				A3D039611DF8BA5D00100887 /* CycleTestsPerUserViewController.swift in Sources */,
 				A304442E1DF62B7F009D9218 /* Service.swift in Sources */,
 				A30444271DF5CA58009D9218 /* MasterTitleView.swift in Sources */,
 				A3C6A52C1DF1C29F00C622D4 /* AppDelegate.swift in Sources */,
