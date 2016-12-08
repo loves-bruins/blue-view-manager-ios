@@ -14,6 +14,8 @@ class CycleTestsPerUserViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
 
+    var key : String!
+    
     // [START define_database_reference]
     var ref: FIRDatabaseReference!
     // [END define_database_reference]
@@ -29,23 +31,21 @@ class CycleTestsPerUserViewController: UIViewController, UITableViewDelegate {
         // [START create_database_reference]
         ref = FIRDatabase.database().reference()
         // [END create_database_reference]
-        self.tableView.register(UINib(nibName: "UserCell", bundle: nil), forCellReuseIdentifier: "user")
+        self.tableView.register(UINib(nibName: "CycleTestTableViewCell", bundle: nil), forCellReuseIdentifier: "cycle_test")
         
         dataSource = FirebaseTableViewDataSource.init(query: getQuery(),
-                                                      modelClass: User.self,
-                                                      nibNamed: "UserCell",
-                                                      cellReuseIdentifier: "user",
+                                                      modelClass: CycleTest.self,
+                                                      nibNamed: "CycleTestTableViewCell",
+                                                      cellReuseIdentifier: "cycle_test",
                                                       view: self.tableView)
         
         dataSource?.populateCell() {
-            guard let cell = $0 as? UserTableViewCell else {
+            guard let cell = $0 as? CycleTestTableViewCell else {
                 return
             }
-            guard let user = $1 as? User else {
+            guard let user = $1 as? CycleTest else {
                 return
             }
-            cell.username.text = user.userName
-            cell.role.text = user.role
         }
         
         tableView.dataSource = dataSource
@@ -74,19 +74,10 @@ class CycleTestsPerUserViewController: UIViewController, UITableViewDelegate {
     }
     
     func getQuery() -> FIRDatabaseQuery {
-        let usersQuery = (ref?.child("users").queryLimited(toFirst: 100))!
+        let usersQuery = (ref?.child("users").child(key!).child("cycle_test").queryLimited(toFirst: 100))!
         return usersQuery
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let path: IndexPath = sender as? IndexPath else { return }
-        guard let detail: AllUsersViewController = segue.destination as? AllUsersViewController else {
-            return
-        }
-        let source = self.dataSource
-        guard let snapshot: FIRDataSnapshot = (source?.object(at: UInt((path as NSIndexPath).row)))! as? FIRDataSnapshot else {
-            return
-        }
-        //detail.postKey = snapshot.key
     }
 }

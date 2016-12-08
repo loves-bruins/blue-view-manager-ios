@@ -61,7 +61,7 @@ class AllUsersViewController: UIViewController, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "detail", sender: indexPath)
+        performSegue(withIdentifier: "ShowCycleTests", sender: indexPath)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -79,13 +79,13 @@ class AllUsersViewController: UIViewController, UITableViewDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let path: IndexPath = sender as? IndexPath else { return }
-        guard let detail: AllUsersViewController = segue.destination as? AllUsersViewController else {
+        guard let detail: CycleTestsPerUserViewController = segue.destination as? CycleTestsPerUserViewController else {
             return
         }
         let source = self.dataSource
         guard let snapshot: FIRDataSnapshot = (source?.object(at: UInt((path as NSIndexPath).row)))! as? FIRDataSnapshot else {
             return
         }
-        //detail.postKey = snapshot.key
+        detail.key = snapshot.key
     }
 }

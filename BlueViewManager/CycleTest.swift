@@ -7,7 +7,7 @@
 //
 
 import UIKit
-class CycleText : NSObject
+class CycleTest : NSObject
 {
     var uid: String
     var date : Date

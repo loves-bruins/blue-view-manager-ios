@@ -106,7 +106,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="at7-pl-7FY" kind="show" id="OxT-YW-ZZM"/>
+                                            <segue destination="at7-pl-7FY" kind="show" id="5lH-ib-GWW"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -496,11 +496,20 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="BPq-2t-Fal" id="4M1-C6-Qzk"/>
+                        <segue destination="fxX-bd-9QI" kind="showDetail" identifier="ShowCycleTests" id="c14-15-Zu7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rwL-XP-dt3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-359.19999999999999" y="-1386.656671664168"/>
+        </scene>
+        <!--CycleTests-->
+        <scene sceneID="XRQ-6S-CfP">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AdminFunctions" referencedIdentifier="CycleTests" id="fxX-bd-9QI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3yu-Ve-3x9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="342" y="-1707"/>
         </scene>
     </scenes>
     <resources>
