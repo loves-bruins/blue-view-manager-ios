@@ -86,6 +86,6 @@ class AllUsersViewController: UIViewController, UITableViewDelegate {
         guard let snapshot: FIRDataSnapshot = (source?.object(at: UInt((path as NSIndexPath).row)))! as? FIRDataSnapshot else {
             return
         }
-        detail.key = snapshot.key
+        detail.userId = snapshot.key
     }
 }

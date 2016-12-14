@@ -11,16 +11,54 @@ import Firebase
 import FirebaseDatabaseUI
 
 class CycleTestsPerUserViewController: UIViewController, UITableViewDelegate {
-
     @IBOutlet weak var tableView: UITableView!
 
-    var key : String!
+
+    var userId : String!
     
     // [START define_database_reference]
     var ref: FIRDatabaseReference!
     // [END define_database_reference]
         
     var dataSource: FirebaseTableViewDataSource?
+    
+    @IBAction func onAddCycleTest (segue : UIStoryboardSegue)
+    {
+        if let vc = segue.source as? AddCycleTestTableViewController {
+        
+            let keys = ["ammonia" : (vc.ammonia.text! as NSString).doubleValue,
+                        "date" : NSString(string:"December 15, 2016"),
+                        "nitrate" : (vc.nitrate.text! as NSString).doubleValue,
+                        "nitrite" : (vc.nitrite.text! as NSString).doubleValue,
+                        "notes" : NSString(string:vc.notes.text!) ] as [String : Any]
+            
+            // Add the cycle-test params to the json database for this user
+            //ref?.child("tests").child(userId!).child("cycle_tests").setValuesForKeys(keys)
+         
+            var newRef = ref?.child("tests").child(userId!).child("cycle_tests").queryOrderedByKey()
+            let key = ref?.child("tests").child(userId!).child("cycle_tests").childByAutoId().key
+            let userID = self.userId
+            newRef?.observe(.value, with: { snapshot in
+                print(snapshot.value)
+                var tests = [CycleTest]()
+                if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                    for snap in snapshots {
+                        if let dict = snap.value as? Dictionary<String, AnyObject> {
+                            let test = CycleTest()
+                            test.setValuesForKeys(dict)
+                            tests.append(test)
+                        }
+                    }
+                    let newAddition = CycleTest.init(uid: self.userId, date: "December 15, 2016", ammonia: (vc.ammonia.text! as NSString).doubleValue, nitrate: (vc.nitrate.text! as NSString).doubleValue, nitrite: (vc.nitrite.text! as NSString).doubleValue, notes: NSString(string:vc.notes.text!) as String)
+                    tests.append(newAddition)
+                    let childUpdates = ["/cycle_tests/\(key)/": keys]
+                    self.ref?.child("tests").child(userID!).updateChildValues(childUpdates)
+                }
+            })
+            
+            self.tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +69,6 @@ class CycleTestsPerUserViewController: UIViewController, UITableViewDelegate {
         // [START create_database_reference]
         ref = FIRDatabase.database().reference()
         // [END create_database_reference]
-        self.tableView.register(UINib(nibName: "CycleTestTableViewCell", bundle: nil), forCellReuseIdentifier: "cycle_test")
         
         dataSource = FirebaseTableViewDataSource.init(query: getQuery(),
                                                       modelClass: CycleTest.self,
@@ -43,9 +80,15 @@ class CycleTestsPerUserViewController: UIViewController, UITableViewDelegate {
             guard let cell = $0 as? CycleTestTableViewCell else {
                 return
             }
-            guard let user = $1 as? CycleTest else {
+            guard let test = $1 as? CycleTest else {
                 return
             }
+            
+            cell.date.text = test.date
+            cell.ammoniaLevel.text = String(format:"%f", test.ammonia)
+            cell.nitrateLevel.text = String(format:"%f", test.nitrate)
+            cell.nitrateLevel.text = String(format:"%f", test.nitrite)
+            cell.notes.text = test.notes
         }
         
         tableView.dataSource = dataSource
@@ -66,7 +109,8 @@ class CycleTestsPerUserViewController: UIViewController, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        
+        return 211// CGFloat((dataSource?.items.count)!)
     }
     
     func getUid() -> String {
@@ -74,7 +118,7 @@ class CycleTestsPerUserViewController: UIViewController, UITableViewDelegate {
     }
     
     func getQuery() -> FIRDatabaseQuery {
-        let usersQuery = (ref?.child("users").child(key!).child("cycle_test").queryLimited(toFirst: 100))!
+        let usersQuery = (ref?.child("tests").child(userId!).child("cycle_tests").queryLimited(toFirst: 100))!
         return usersQuery
     }
     

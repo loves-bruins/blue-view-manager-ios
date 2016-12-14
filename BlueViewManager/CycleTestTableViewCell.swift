@@ -9,10 +9,12 @@
 import UIKit
 
 class CycleTestTableViewCell: UITableViewCell {
+    @IBOutlet weak var notes: UILabel!
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var nitrateLevel: UILabel!
     @IBOutlet weak var ammoniaLevel: UILabel!
     @IBOutlet weak var nitriteLevel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

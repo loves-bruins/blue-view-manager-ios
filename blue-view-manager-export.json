@@ -1,0 +1,29 @@
+{
+  "tests" : {
+      "F259TA3LR7OmFBmE8FnMCMpN3NA2" : {
+          "cycle_tests" : [
+          {
+              "ammonia" : 100,
+              "date" : "December 07, 2016",
+              "nitrate" : 200,
+              "nitrite" : 300,
+              "notes" : "Loren sucks"
+          }
+          ]
+      }
+  },
+  "users" : {
+    "F259TA3LR7OmFBmE8FnMCMpN3NA2" : {
+      "role" : "user",
+      "userName" : "loren.rogers@gmail.com"
+    },
+    "Z3TG5zIx3SUUzQnItzN4X5V7P8s1" : {
+      "role" : "user",
+      "userName" : "lrogersego@gmail.com"
+    },
+    "oNtBoLJUjtYyyOtiZtFm5lXj4q42" : {
+      "role" : "admin",
+      "userName" : "blueviewaquatics@gmail.com"
+    }
+  }
+}

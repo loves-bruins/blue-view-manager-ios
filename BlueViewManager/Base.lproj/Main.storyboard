@@ -496,7 +496,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="BPq-2t-Fal" id="4M1-C6-Qzk"/>
-                        <segue destination="fxX-bd-9QI" kind="showDetail" identifier="ShowCycleTests" id="c14-15-Zu7"/>
+                        <segue destination="fxX-bd-9QI" kind="show" identifier="ShowCycleTests" id="c14-15-Zu7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rwL-XP-dt3" userLabel="First Responder" sceneMemberID="firstResponder"/>

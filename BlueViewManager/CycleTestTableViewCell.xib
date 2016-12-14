@@ -9,11 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="cycle_test" rowHeight="212" id="KGk-i7-Jjw" customClass="CycleTestTableViewCell" customModule="BlueViewManager" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="212"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="cycle_test" rowHeight="211" id="KGk-i7-Jjw" customClass="CycleTestTableViewCell" customModule="BlueViewManager" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="211"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="253" height="211"/>
+                <frame key="frameInset" width="253" height="210"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydp-G3-qMJ">
@@ -117,8 +117,9 @@
                 <outlet property="date" destination="Pzh-la-Tq3" id="9WC-bK-V8O"/>
                 <outlet property="nitrateLevel" destination="cwD-U0-JwA" id="NJK-5q-NOv"/>
                 <outlet property="nitriteLevel" destination="fOv-yO-Wxo" id="mhs-v3-DHA"/>
+                <outlet property="notes" destination="YFj-Ac-HlB" id="Yfn-hd-1HT"/>
             </connections>
-            <point key="canvasLocation" x="25" y="136"/>
+            <point key="canvasLocation" x="25" y="135.5"/>
         </tableViewCell>
     </objects>
 </document>

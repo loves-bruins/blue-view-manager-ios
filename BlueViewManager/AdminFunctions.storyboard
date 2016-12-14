@@ -7,46 +7,61 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Cycle Tests-->
-        <scene sceneID="gRU-mj-iid">
+        <!--Navigation Controller-->
+        <scene sceneID="9EN-er-ue2">
             <objects>
-                <viewController storyboardIdentifier="CycleTests" title="Cycle Tests" id="3aU-iM-mxG" customClass="CycleTestsPerUserViewController" customModule="BlueViewManager" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="pom-np-8Fj" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="VRM-YA-6MY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="tKs-fj-PgX" kind="relationship" relationship="rootViewController" id="dqa-KR-Dde"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HDZ-Rc-uRl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-81" y="65"/>
+        </scene>
+        <!--Cycle Tests Per User View Controller-->
+        <scene sceneID="ExR-VM-TeY">
+            <objects>
+                <viewController storyboardIdentifier="CycleTests" id="tKs-fj-PgX" customClass="CycleTestsPerUserViewController" customModule="BlueViewManager" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="W2B-0B-4AN"/>
-                        <viewControllerLayoutGuide type="bottom" id="oPw-Zg-n4B"/>
+                        <viewControllerLayoutGuide type="top" id="R85-Cw-flA"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fcu-Yh-A69"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Wbe-6F-YOG">
+                    <view key="view" contentMode="scaleToFill" id="btf-Du-Dm4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1RD-wZ-LJS">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SAA-lM-ZFc">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.0" green="0.53333333329999999" blue="0.87843137250000003" alpha="1" colorSpace="deviceRGB"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oPw-Zg-n4B" firstAttribute="top" secondItem="1RD-wZ-LJS" secondAttribute="bottom" id="6zK-z5-C6j"/>
-                            <constraint firstAttribute="trailing" secondItem="1RD-wZ-LJS" secondAttribute="trailing" id="bdD-hS-JEH"/>
-                            <constraint firstItem="1RD-wZ-LJS" firstAttribute="leading" secondItem="Wbe-6F-YOG" secondAttribute="leading" id="d8C-Ul-zs2"/>
-                            <constraint firstItem="1RD-wZ-LJS" firstAttribute="top" secondItem="W2B-0B-4AN" secondAttribute="bottom" constant="8" id="tKU-Xn-yaK"/>
+                            <constraint firstItem="Fcu-Yh-A69" firstAttribute="top" secondItem="SAA-lM-ZFc" secondAttribute="bottom" id="2xw-Sp-kQG"/>
+                            <constraint firstItem="SAA-lM-ZFc" firstAttribute="leading" secondItem="btf-Du-Dm4" secondAttribute="leading" id="HBd-7V-1qA"/>
+                            <constraint firstAttribute="trailing" secondItem="SAA-lM-ZFc" secondAttribute="trailing" id="IjI-AZ-O0O"/>
+                            <constraint firstItem="SAA-lM-ZFc" firstAttribute="top" secondItem="btf-Du-Dm4" secondAttribute="top" id="SNq-nI-t10"/>
                         </constraints>
                     </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Cycle Tests" id="7UP-J8-4C5">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ild-Y4-RWu">
+                    <navigationItem key="navigationItem" id="XaD-Qj-vy3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="R4e-eO-wNh">
                             <connections>
-                                <segue destination="4zQ-OI-3qy" kind="show" id="AWC-wg-1yj"/>
+                                <segue destination="4zQ-OI-3qy" kind="show" id="LXq-4y-bnj"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="tableView" destination="1RD-wZ-LJS" id="O1N-c7-Edn"/>
+                        <outlet property="tableView" destination="SAA-lM-ZFc" id="Qfe-La-NcG"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jcZ-pq-UOY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g4R-Zf-ovC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="956" y="125.4872563718141"/>
+            <point key="canvasLocation" x="685.60000000000002" y="-21.139430284857571"/>
         </scene>
         <!--Add Test Cycle-->
         <scene sceneID="n4B-93-Lml">
@@ -60,7 +75,7 @@
                             <tableViewSection headerTitle="Date" id="btL-rJ-0Aj">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="svz-OV-ElY">
-                                        <rect key="frame" x="0.0" y="56" width="375" height="106"/>
+                                        <rect key="frame" x="0.0" y="120" width="375" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="svz-OV-ElY" id="jGG-Ok-KPV">
                                             <frame key="frameInset" width="375" height="105"/>
@@ -81,7 +96,7 @@
                             <tableViewSection headerTitle="Ammonia Level" id="0pj-fF-SsM">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="CmE-jf-OsF">
-                                        <rect key="frame" x="0.0" y="219" width="375" height="106"/>
+                                        <rect key="frame" x="0.0" y="283" width="375" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CmE-jf-OsF" id="GLp-nY-kpj">
                                             <frame key="frameInset" width="375" height="105"/>
@@ -108,7 +123,7 @@
                             <tableViewSection headerTitle="Nitrate Level" id="zId-ok-50L">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="4OR-kN-8Tl">
-                                        <rect key="frame" x="0.0" y="382" width="375" height="106"/>
+                                        <rect key="frame" x="0.0" y="446" width="375" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4OR-kN-8Tl" id="WFa-Hp-zN1">
                                             <frame key="frameInset" width="375" height="105"/>
@@ -135,7 +150,7 @@
                             <tableViewSection headerTitle="Nitrite Level" id="FMZ-JH-EJB">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="srV-ps-dFX">
-                                        <rect key="frame" x="0.0" y="545" width="375" height="106"/>
+                                        <rect key="frame" x="0.0" y="609" width="375" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="srV-ps-dFX" id="GBF-vA-PcR">
                                             <frame key="frameInset" width="375" height="105"/>
@@ -162,7 +177,7 @@
                             <tableViewSection headerTitle="Extra Notes" id="0K8-bf-Tpc">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="xSK-mc-WBZ">
-                                        <rect key="frame" x="0.0" y="708" width="375" height="106"/>
+                                        <rect key="frame" x="0.0" y="772" width="375" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xSK-mc-WBZ" id="L3N-1u-T0g">
                                             <frame key="frameInset" width="375" height="105"/>
@@ -193,7 +208,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Test Cycle" id="Oxi-GH-l2f">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="bi9-aH-Guj"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="bi9-aH-Guj">
+                            <connections>
+                                <segue destination="OLm-iO-89h" kind="unwind" unwindAction="onAddCycleTestWithSegue:" id="aau-DX-Ohq"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="ammonia" destination="LXr-qq-x9C" id="RjB-cd-tSm"/>
@@ -204,6 +223,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="am3-Hv-rTM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="OLm-iO-89h" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1736.8" y="124.58770614692655"/>
         </scene>
