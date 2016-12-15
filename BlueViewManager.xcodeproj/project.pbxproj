@@ -124,6 +124,7 @@
 		A38764E91E033C10005E3C3C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A38764E51E01F660005E3C3C /* ServicesPerUserViewController.swift */,
 				A38764EC1E033CB2005E3C3C /* ContainerViewController.swift */,
 				A38764EE1E033CDF005E3C3C /* SidePanelViewController.swift */,
 				A38764F01E033CFB005E3C3C /* CenterViewController.swift */,
@@ -190,7 +191,6 @@
 				A30444201DF3644C009D9218 /* SignupViewController.swift */,
 				A30444261DF5CA58009D9218 /* MasterTitleView.swift */,
 				A3D039521DF7B18600100887 /* AllUsersViewController.swift */,
-				A38764E51E01F660005E3C3C /* ServicesPerUserViewController.swift */,
 				A38764E71E03066D005E3C3C /* UserHistoryTableViewController.swift */,
 			);
 			path = BlueViewManager;

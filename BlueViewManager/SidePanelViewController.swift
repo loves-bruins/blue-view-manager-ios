@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabaseUI
 
 @objc
 protocol SidePanelViewControllerDelegate {
@@ -17,7 +19,11 @@ class SidePanelViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var animals: Array<Animal>!
+    var services: Array<Service>!
+
+    // [START define_database_reference]
+    var ref: FIRDatabaseReference!
+    // [END define_database_reference]
     
     struct TableView {
         struct CellIdentifiers {
@@ -27,9 +33,28 @@ class SidePanelViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        // [START create_database_reference]
+        ref = FIRDatabase.database().reference()
+        // [END create_database_reference]
+
+        let newRef = ref?.child("services").queryOrderedByKey()
+        newRef?.observe(.value, with: { snapshot in
+            print(snapshot.value)
+            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                for snap in snapshots {
+                    if let dict = snap.value as? Dictionary<String, AnyObject> {
+                        let service = Service()
+                        service.setValuesForKeys(dict)
+                        self.services.append(service)
+                    }
+                }
+            }
+        })
         tableView.reloadData()
     }
+    
+
     
 }
 
@@ -42,12 +67,12 @@ extension SidePanelViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return animals.count
+        return services.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TableView.CellIdentifiers.ServiceTypeCell, for: indexPath) as! ServiceTypeCell
-        cell.configureForAnimal(animals[(indexPath as NSIndexPath).row])
+        cell.configureForAnimal(services[(indexPath as NSIndexPath).row])
         return cell
     }
     

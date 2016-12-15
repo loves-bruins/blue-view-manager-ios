@@ -18,12 +18,8 @@ class ContainerViewController: UIViewController {
 }
 
 private extension UIStoryboard {
-    class func mainStoryboard() -> UIStoryboard { return UIStoryboard(name: "Main", bundle: Bundle.main) }
-    
-    class func leftViewController() -> SidePanelViewController? {
-        return mainStoryboard().instantiateViewController(withIdentifier: "LeftViewController") as? SidePanelViewController
-    }
-    
+    class func mainStoryboard() -> UIStoryboard { return UIStoryboard(name: "AdminFunctions", bundle: Bundle.main) }
+        
     class func rightViewController() -> SidePanelViewController? {
         return mainStoryboard().instantiateViewController(withIdentifier: "RightViewController") as? SidePanelViewController
     }
