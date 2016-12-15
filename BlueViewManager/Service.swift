@@ -10,19 +10,21 @@ import UIKit
 
 class Service : NSObject {
     var uid: String
-    var customer: String
-    var date: NSDate
-    var serviceDescription: String
+    var title: String
+    var price: Double
+    var date: String
+    var notes: String
     
     
-    init(uid: String, customer: String, date: NSDate, serviceDescription: String){
+    init(uid: String, title: String, price: Double, date: String, notes: String){
         self.uid = uid
-        self.customer = customer
+        self.title = title
+        self.price = price
         self.date = date
-        self.serviceDescription = serviceDescription
+        self.notes = notes
     }
     
     convenience override init() {
-        self.init(uid: "", customer: "", date: NSDate.init(timeIntervalSinceNow: 0), serviceDescription: "")
+        self.init(uid: "", title: "", price: 0.00, date: "", notes: "")
     }
 }

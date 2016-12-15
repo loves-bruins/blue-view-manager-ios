@@ -27,30 +27,7 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func cancelSignUp(segue: UIStoryboardSegue)
-    {
-    }
-    
-    @IBAction func createUser(segue: UIStoryboardSegue)
-    {
-        if let signupVC = segue.source as? SignupViewController {
-            if let email = signupVC.emailField.text, let password = signupVC.passwordField.text {
-                signupVC.showSpinner({
-                    FIRAuth.auth()?.createUser(withEmail:email, password:password) {(user, error) in
-                        signupVC.hideSpinner({
-                            if let error = error {
-                                signupVC.showMessagePrompt(error.localizedDescription)
-                                return;
-                            }
-                            
-                        })
-                    }
-                })
-            }
-        }
-    }
-    
+        
     @IBAction func onSignIn(_ sender: AnyObject) {
         if let email = self.emailField.text, let password = self.passwordField.text {
             self.showSpinner({

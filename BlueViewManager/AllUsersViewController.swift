@@ -16,9 +16,28 @@ class AllUsersViewController: UIViewController, UITableViewDelegate {
     // [END define_database_reference]
   
     @IBOutlet weak var tableView: UITableView!
-  
+    
     var dataSource: FirebaseTableViewDataSource?
 
+    @IBAction func createUser(segue: UIStoryboardSegue)
+    {
+        if let signupVC = segue.source as? SignupViewController {
+            if let email = signupVC.emailField.text, let password = signupVC.passwordField.text {
+                signupVC.showSpinner({
+                    FIRAuth.auth()?.createUser(withEmail:email, password:password) {(user, error) in
+                        signupVC.hideSpinner({
+                            if let error = error {
+                                signupVC.showMessagePrompt(error.localizedDescription)
+                                return;
+                            }
+                            
+                        })
+                    }
+                })
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -61,7 +80,7 @@ class AllUsersViewController: UIViewController, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "ShowCycleTests", sender: indexPath)
+        performSegue(withIdentifier: "showUserHistory", sender: indexPath)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -79,7 +98,7 @@ class AllUsersViewController: UIViewController, UITableViewDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let path: IndexPath = sender as? IndexPath else { return }
-        guard let detail: CycleTestsPerUserViewController = segue.destination as? CycleTestsPerUserViewController else {
+        guard let detail: UserHistoryTableViewController = segue.destination as? UserHistoryTableViewController else {
             return
         }
         let source = self.dataSource

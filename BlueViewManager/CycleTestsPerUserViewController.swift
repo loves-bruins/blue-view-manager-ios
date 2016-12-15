@@ -25,9 +25,11 @@ class CycleTestsPerUserViewController: UIViewController, UITableViewDelegate {
     @IBAction func onAddCycleTest (segue : UIStoryboardSegue)
     {
         if let vc = segue.source as? AddCycleTestTableViewController {
-        
+            let dateFormatter = DateFormatter.init()
+            dateFormatter.dateStyle = .medium
+            let dateString = dateFormatter.string(from: vc.date.date)
             let keys = ["ammonia" : (vc.ammonia.text! as NSString).doubleValue,
-                        "date" : NSString(string:"December 15, 2016"),
+                        "date" : NSString(string:dateString),
                         "nitrate" : (vc.nitrate.text! as NSString).doubleValue,
                         "nitrite" : (vc.nitrite.text! as NSString).doubleValue,
                         "notes" : NSString(string:vc.notes.text!) ] as [String : Any]
@@ -35,7 +37,7 @@ class CycleTestsPerUserViewController: UIViewController, UITableViewDelegate {
             // Add the cycle-test params to the json database for this user
             //ref?.child("tests").child(userId!).child("cycle_tests").setValuesForKeys(keys)
          
-            var newRef = ref?.child("tests").child(userId!).child("cycle_tests").queryOrderedByKey()
+            let newRef = ref?.child("tests").child(userId!).child("cycle_tests").queryOrderedByKey()
             let key = ref?.child("tests").child(userId!).child("cycle_tests").childByAutoId().key
             let userID = self.userId
             newRef?.observe(.value, with: { snapshot in
@@ -49,8 +51,6 @@ class CycleTestsPerUserViewController: UIViewController, UITableViewDelegate {
                             tests.append(test)
                         }
                     }
-                    let newAddition = CycleTest.init(uid: self.userId, date: "December 15, 2016", ammonia: (vc.ammonia.text! as NSString).doubleValue, nitrate: (vc.nitrate.text! as NSString).doubleValue, nitrite: (vc.nitrite.text! as NSString).doubleValue, notes: NSString(string:vc.notes.text!) as String)
-                    tests.append(newAddition)
                     let childUpdates = ["/cycle_tests/\(key)/": keys]
                     self.ref?.child("tests").child(userID!).updateChildValues(childUpdates)
                 }
@@ -85,9 +85,9 @@ class CycleTestsPerUserViewController: UIViewController, UITableViewDelegate {
             }
             
             cell.date.text = test.date
-            cell.ammoniaLevel.text = String(format:"%f", test.ammonia)
-            cell.nitrateLevel.text = String(format:"%f", test.nitrate)
-            cell.nitrateLevel.text = String(format:"%f", test.nitrite)
+            cell.ammoniaLevel.text = String(format:"%0.03f", test.ammonia)
+            cell.nitrateLevel.text = String(format:"%0.03f", test.nitrate)
+            cell.nitriteLevel.text = String(format:"%0.03f", test.nitrite)
             cell.notes.text = test.notes
         }
         
