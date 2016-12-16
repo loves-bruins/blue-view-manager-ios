@@ -30,6 +30,7 @@ class ServicesPerUserViewController: UIViewController {
     }
     
     @IBAction func addService(_ sender: AnyObject) {
+        delegate?.toggleRightPanel?()
     }
 
     /*
