@@ -16,7 +16,7 @@ enum SlideOutState {
 
 class ContainerViewController: UIViewController {
     
-    var centerNavigationController: UINavigationController!
+    // var centerNavigationController: UINavigationController!
     var centerViewController: ServicesPerUserViewController!
     var currentState: SlideOutState = .RightPanelCollapsed
     var rightViewController: SidePanelViewController?
@@ -30,13 +30,17 @@ class ContainerViewController: UIViewController {
         
         // wrap the centerViewController in a navigation controller, so we can push views to it
         // and display bar button items in the navigation bar
-        centerNavigationController = UINavigationController(rootViewController: centerViewController)
-        view.addSubview(centerNavigationController.view)
-        addChildViewController(centerNavigationController)
+        //centerNavigationController = UINavigationController(rootViewController: centerViewController)
+        //view.addSubview((self.navigationController?.view)!) //centerNavigationController.view)
+        //addChildViewController(centerNavigationController)
         
-        centerNavigationController.didMove(toParentViewController: self)
+        //centerNavigationController.didMove(toParentViewController: self)
+        //self.navigationController?.didMove(toParentViewController: self)
     }
     
+    @IBAction func showServices(_ sender: AnyObject) {
+        centerViewController.addService(sender)
+    }
 }
 
 // MARK: CenterViewController delegate
@@ -51,12 +55,12 @@ extension ContainerViewController: ServicesPerUserViewControllerDelegate {
         }
         
         animateRightPanel(shouldExpand: notAlreadyExpanded)
+        rightViewController?.view.bringSubview(toFront: (rightViewController?.tableView)!)
     }
     
     func addRightPanelViewController() {
         if (rightViewController == nil) {
             rightViewController = UIStoryboard.rightViewController()
-            //rightViewController!.animals = Animal.allCats()
             
             addChildSidePanelController(rightViewController!)
         }
@@ -72,8 +76,9 @@ extension ContainerViewController: ServicesPerUserViewControllerDelegate {
     func animateRightPanel(shouldExpand: Bool) {
         if (shouldExpand) {
             currentState = .RightPanelExpanded
-            
-            animateCenterPanelXPosition(targetPosition: centerNavigationController.view.frame.width - centerPanelExpandedOffset)
+            var frameWidth = CGFloat(0)
+            frameWidth = (self.navigationController?.view.frame.width)!
+            animateCenterPanelXPosition(targetPosition: -frameWidth + centerPanelExpandedOffset)
         } else {
             animateCenterPanelXPosition(targetPosition: 0) { finished in
                 self.currentState = .RightPanelCollapsed
@@ -86,7 +91,7 @@ extension ContainerViewController: ServicesPerUserViewControllerDelegate {
     
     func animateCenterPanelXPosition(targetPosition: CGFloat, completion: ((Bool) -> Void)! = nil) {
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-            self.centerNavigationController.view.frame.origin.x = targetPosition
+            self.navigationController?.view.frame.origin.x = targetPosition
             }, completion: completion)
     }
     

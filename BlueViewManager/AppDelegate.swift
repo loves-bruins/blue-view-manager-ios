@@ -17,18 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-//        self.window = UIWindow(frame: UIScreen.main.bounds)
-//        
-//        let storyboard = UIStoryboard(name: "SignupOrLogin", bundle: nil)
-//        
-//        let initialViewController = storyboard.instantiateViewController(withIdentifier: "SignupOrLogin")
-//        
-//        self.window?.rootViewController = initialViewController
-//        self.window?.makeKeyAndVisible()
-//        FIRApp.configure()
-//        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-//        return true
-        
         
         let splitViewController = self.window!.rootViewController as! UISplitViewController
         let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController

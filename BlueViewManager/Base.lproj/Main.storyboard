@@ -362,7 +362,7 @@
                             <tableViewSection headerTitle="Enter Email" id="pRy-sU-s4n">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="7zU-Tq-Dou">
-                                        <rect key="frame" x="0.0" y="164" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="163.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7zU-Tq-Dou" id="mxS-dk-run">
                                             <frame key="frameInset" width="375" height="43"/>
@@ -390,7 +390,7 @@
                             <tableViewSection headerTitle="Input Password" id="DUi-th-gBe">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="DfQ-IC-6cv">
-                                        <rect key="frame" x="0.0" y="265" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="263.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DfQ-IC-6cv" id="zS7-SM-5xw">
                                             <frame key="frameInset" width="375" height="43"/>
@@ -418,7 +418,7 @@
                             <tableViewSection headerTitle="Verify Password" id="Cmt-Ee-jUZ">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="7ff-p2-eqj">
-                                        <rect key="frame" x="0.0" y="366" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="363.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7ff-p2-eqj" id="c8D-m0-Dgr">
                                             <frame key="frameInset" width="375" height="43"/>

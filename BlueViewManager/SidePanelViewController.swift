@@ -19,7 +19,7 @@ class SidePanelViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var services: Array<Service>!
+    var services = [Service]()
 
     // [START define_database_reference]
     var ref: FIRDatabaseReference!
@@ -49,6 +49,7 @@ class SidePanelViewController: UIViewController {
                         self.services.append(service)
                     }
                 }
+                self.tableView.reloadData()
             }
         })
         tableView.reloadData()
@@ -72,7 +73,7 @@ extension SidePanelViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TableView.CellIdentifiers.ServiceTypeCell, for: indexPath) as! ServiceTypeCell
-        cell.configureForAnimal(services[(indexPath as NSIndexPath).row])
+        cell.configureForService(services[(indexPath as NSIndexPath).row])
         return cell
     }
     
@@ -84,15 +85,17 @@ extension SidePanelViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
-    
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 55
+    }
 }
 
 class ServiceTypeCell: UITableViewCell {
+    @IBOutlet weak var title: UILabel!
     
-    @IBOutlet weak var titleLabel: UILabel!
-    
-    func configureForAnimal(_ service: Service) {
-        titleLabel.text = service.title
+    func configureForService(_ service: Service) {
+        title.text = service.title
     }
     
 }

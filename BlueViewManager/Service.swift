@@ -9,14 +9,17 @@
 import UIKit
 
 class Service : NSObject {
-    var uid: String
-    var title: String
+    var id: String
     var price: Double
+    var title: String
+
+    var uid: String
     var date: String
     var notes: String
     
     
-    init(uid: String, title: String, price: Double, date: String, notes: String){
+    init(id: String, uid: String, title: String, price: Double, date: String, notes: String){
+        self.id = id
         self.uid = uid
         self.title = title
         self.price = price
@@ -25,6 +28,6 @@ class Service : NSObject {
     }
     
     convenience override init() {
-        self.init(uid: "", title: "", price: 0.00, date: "", notes: "")
+        self.init(id: "", uid: "", title: "", price: 0.00, date: "", notes: "")
     }
 }

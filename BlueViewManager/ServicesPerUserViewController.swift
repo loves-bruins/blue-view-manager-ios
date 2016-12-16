@@ -22,6 +22,7 @@ class ServicesPerUserViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addService))
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,7 +30,7 @@ class ServicesPerUserViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func addService(_ sender: AnyObject) {
+    func addService(_ sender: AnyObject) {
         delegate?.toggleRightPanel?()
     }
 
