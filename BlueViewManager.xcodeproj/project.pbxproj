@@ -19,7 +19,6 @@
 		A38764E81E03066D005E3C3C /* UserHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38764E71E03066D005E3C3C /* UserHistoryTableViewController.swift */; };
 		A38764ED1E033CB2005E3C3C /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38764EC1E033CB2005E3C3C /* ContainerViewController.swift */; };
 		A38764EF1E033CDF005E3C3C /* SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38764EE1E033CDF005E3C3C /* SidePanelViewController.swift */; };
-		A38764F11E033CFB005E3C3C /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38764F01E033CFB005E3C3C /* CenterViewController.swift */; };
 		A3A6EF461DF8E53200D98BED /* AddCycleTestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A6EF451DF8E53200D98BED /* AddCycleTestTableViewController.swift */; };
 		A3C6A52C1DF1C29F00C622D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C6A52B1DF1C29F00C622D4 /* AppDelegate.swift */; };
 		A3C6A52E1DF1C29F00C622D4 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C6A52D1DF1C29F00C622D4 /* MasterViewController.swift */; };
@@ -55,7 +54,6 @@
 		A38764E71E03066D005E3C3C /* UserHistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHistoryTableViewController.swift; sourceTree = "<group>"; };
 		A38764EC1E033CB2005E3C3C /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		A38764EE1E033CDF005E3C3C /* SidePanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidePanelViewController.swift; sourceTree = "<group>"; };
-		A38764F01E033CFB005E3C3C /* CenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
 		A3A6EF451DF8E53200D98BED /* AddCycleTestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCycleTestTableViewController.swift; sourceTree = "<group>"; };
 		A3C6A5281DF1C29F00C622D4 /* BlueViewManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueViewManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C6A52B1DF1C29F00C622D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -127,7 +125,6 @@
 				A38764E51E01F660005E3C3C /* ServicesPerUserViewController.swift */,
 				A38764EC1E033CB2005E3C3C /* ContainerViewController.swift */,
 				A38764EE1E033CDF005E3C3C /* SidePanelViewController.swift */,
-				A38764F01E033CFB005E3C3C /* CenterViewController.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -348,7 +345,6 @@
 				A3A6EF461DF8E53200D98BED /* AddCycleTestTableViewController.swift in Sources */,
 				A3D039531DF7B18600100887 /* AllUsersViewController.swift in Sources */,
 				A30444211DF3644C009D9218 /* SignupViewController.swift in Sources */,
-				A38764F11E033CFB005E3C3C /* CenterViewController.swift in Sources */,
 				A3C6A5301DF1C29F00C622D4 /* DetailViewController.swift in Sources */,
 				A3D039591DF89BD600100887 /* CycleTest.swift in Sources */,
 				A304442C1DF62A50009D9218 /* Purchase.swift in Sources */,

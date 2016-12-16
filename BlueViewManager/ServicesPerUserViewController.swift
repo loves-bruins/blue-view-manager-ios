@@ -8,8 +8,15 @@
 
 import UIKit
 
+@objc
+protocol ServicesPerUserViewControllerDelegate {
+    @objc optional func toggleRightPanel()
+    @objc optional func collapseSidePanels()
+}
+
 class ServicesPerUserViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    var delegate: ServicesPerUserViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +29,8 @@ class ServicesPerUserViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func addService(_ sender: AnyObject) {
+    }
 
     /*
     // MARK: - Navigation

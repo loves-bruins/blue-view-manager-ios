@@ -50,7 +50,7 @@
         <!--Services Performed-->
         <scene sceneID="31m-Zt-VWa">
             <objects>
-                <viewController storyboardIdentifier="Services" id="chD-Sl-NDH" customClass="ServicesPerUserViewController" customModule="BlueViewManager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ServicesViewController" id="chD-Sl-NDH" customClass="ServicesPerUserViewController" customModule="BlueViewManager" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="esv-ZX-CTR"/>
                         <viewControllerLayoutGuide type="bottom" id="rwT-4R-4kq"/>
@@ -72,7 +72,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Services Performed" id="X5C-ss-Lwr">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="NEt-wg-cL9"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="NEt-wg-cL9">
+                            <connections>
+                                <action selector="addService:" destination="chD-Sl-NDH" id="VRA-dP-CF1"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="tlG-iI-SUl" id="gRK-ku-U1d"/>
