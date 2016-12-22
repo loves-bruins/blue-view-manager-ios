@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6B4C18BD8C8885068325DF77 /* Pods_BlueViewManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15828FAA907A005BF19D9BD1 /* Pods_BlueViewManager.framework */; };
+		A303FF1C1E0B348200664982 /* WaterChangeServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A303FF1B1E0B348200664982 /* WaterChangeServiceViewController.swift */; };
+		A303FF1E1E0C3DC100664982 /* AlgaeScrapeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A303FF1D1E0C3DC100664982 /* AlgaeScrapeViewController.swift */; };
 		A304441F1DF34DA3009D9218 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A304441E1DF34DA3009D9218 /* Images.xcassets */; };
 		A30444211DF3644C009D9218 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30444201DF3644C009D9218 /* SignupViewController.swift */; };
 		A30444251DF5C900009D9218 /* MasterTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A30444241DF5C900009D9218 /* MasterTitleView.xib */; };
@@ -17,7 +19,6 @@
 		A304442E1DF62B7F009D9218 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = A304442D1DF62B7F009D9218 /* Service.swift */; };
 		A38764E61E01F660005E3C3C /* ServicesPerUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38764E51E01F660005E3C3C /* ServicesPerUserViewController.swift */; };
 		A38764E81E03066D005E3C3C /* UserHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38764E71E03066D005E3C3C /* UserHistoryTableViewController.swift */; };
-		A38764ED1E033CB2005E3C3C /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38764EC1E033CB2005E3C3C /* ContainerViewController.swift */; };
 		A38764EF1E033CDF005E3C3C /* SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38764EE1E033CDF005E3C3C /* SidePanelViewController.swift */; };
 		A3A6EF461DF8E53200D98BED /* AddCycleTestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A6EF451DF8E53200D98BED /* AddCycleTestTableViewController.swift */; };
 		A3C6A52C1DF1C29F00C622D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C6A52B1DF1C29F00C622D4 /* AppDelegate.swift */; };
@@ -43,6 +44,8 @@
 		03CD02307BDC3F6528598621 /* Pods-BlueViewManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueViewManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlueViewManager/Pods-BlueViewManager.release.xcconfig"; sourceTree = "<group>"; };
 		15828FAA907A005BF19D9BD1 /* Pods_BlueViewManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlueViewManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		935A3541D7D1D9594CB28C23 /* Pods-BlueViewManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueViewManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlueViewManager/Pods-BlueViewManager.debug.xcconfig"; sourceTree = "<group>"; };
+		A303FF1B1E0B348200664982 /* WaterChangeServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterChangeServiceViewController.swift; sourceTree = "<group>"; };
+		A303FF1D1E0C3DC100664982 /* AlgaeScrapeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgaeScrapeViewController.swift; sourceTree = "<group>"; };
 		A304441E1DF34DA3009D9218 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A30444201DF3644C009D9218 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		A30444241DF5C900009D9218 /* MasterTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MasterTitleView.xib; sourceTree = "<group>"; };
@@ -52,7 +55,6 @@
 		A304442D1DF62B7F009D9218 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		A38764E51E01F660005E3C3C /* ServicesPerUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesPerUserViewController.swift; sourceTree = "<group>"; };
 		A38764E71E03066D005E3C3C /* UserHistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHistoryTableViewController.swift; sourceTree = "<group>"; };
-		A38764EC1E033CB2005E3C3C /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		A38764EE1E033CDF005E3C3C /* SidePanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidePanelViewController.swift; sourceTree = "<group>"; };
 		A3A6EF451DF8E53200D98BED /* AddCycleTestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCycleTestTableViewController.swift; sourceTree = "<group>"; };
 		A3C6A5281DF1C29F00C622D4 /* BlueViewManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueViewManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,8 +125,9 @@
 			isa = PBXGroup;
 			children = (
 				A38764E51E01F660005E3C3C /* ServicesPerUserViewController.swift */,
-				A38764EC1E033CB2005E3C3C /* ContainerViewController.swift */,
 				A38764EE1E033CDF005E3C3C /* SidePanelViewController.swift */,
+				A303FF1B1E0B348200664982 /* WaterChangeServiceViewController.swift */,
+				A303FF1D1E0C3DC100664982 /* AlgaeScrapeViewController.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -351,16 +354,17 @@
 				A3D039551DF7B27500100887 /* UserTableViewCell.swift in Sources */,
 				A3D0395E1DF8A31A00100887 /* CycleTestTableViewCell.swift in Sources */,
 				A3C6A54F1DF226C400C622D4 /* UIViewController+Alerts.m in Sources */,
+				A303FF1E1E0C3DC100664982 /* AlgaeScrapeViewController.swift in Sources */,
 				A3C6A5451DF2020900C622D4 /* LoginViewController.swift in Sources */,
 				A304442A1DF629A7009D9218 /* User.swift in Sources */,
 				A38764E81E03066D005E3C3C /* UserHistoryTableViewController.swift in Sources */,
 				A38764EF1E033CDF005E3C3C /* SidePanelViewController.swift in Sources */,
-				A38764ED1E033CB2005E3C3C /* ContainerViewController.swift in Sources */,
 				A3C6A52E1DF1C29F00C622D4 /* MasterViewController.swift in Sources */,
 				A3D039611DF8BA5D00100887 /* CycleTestsPerUserViewController.swift in Sources */,
 				A38764E61E01F660005E3C3C /* ServicesPerUserViewController.swift in Sources */,
 				A304442E1DF62B7F009D9218 /* Service.swift in Sources */,
 				A30444271DF5CA58009D9218 /* MasterTitleView.swift in Sources */,
+				A303FF1C1E0B348200664982 /* WaterChangeServiceViewController.swift in Sources */,
 				A3C6A52C1DF1C29F00C622D4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

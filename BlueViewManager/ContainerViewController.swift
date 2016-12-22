@@ -26,21 +26,22 @@ class ContainerViewController: UIViewController {
         super.viewDidLoad()
 
         centerViewController = UIStoryboard.centerViewController()
-        centerViewController.delegate = self
+        //centerViewController.delegate = self
         
         // wrap the centerViewController in a navigation controller, so we can push views to it
         // and display bar button items in the navigation bar
         //centerNavigationController = UINavigationController(rootViewController: centerViewController)
-        //view.addSubview((self.navigationController?.view)!) //centerNavigationController.view)
+        //view.addSubview(centerViewController.view) //centerNavigationController.view)
+        
         //addChildViewController(centerNavigationController)
         
         //centerNavigationController.didMove(toParentViewController: self)
         //self.navigationController?.didMove(toParentViewController: self)
     }
     
-    @IBAction func showServices(_ sender: AnyObject) {
-        centerViewController.addService(sender)
-    }
+//    @IBAction func showServices(_ sender: AnyObject) {
+//        centerViewController.addService(sender)
+//    }
 }
 
 // MARK: CenterViewController delegate
@@ -55,7 +56,6 @@ extension ContainerViewController: ServicesPerUserViewControllerDelegate {
         }
         
         animateRightPanel(shouldExpand: notAlreadyExpanded)
-        rightViewController?.view.bringSubview(toFront: (rightViewController?.tableView)!)
     }
     
     func addRightPanelViewController() {
@@ -67,8 +67,8 @@ extension ContainerViewController: ServicesPerUserViewControllerDelegate {
     }
     
     func addChildSidePanelController(_ sidePanelController: SidePanelViewController) {
-        view.insertSubview(sidePanelController.view, at: 0)
-        
+        //view.insertSubview(sidePanelController.view, at: 0)
+        view.addSubview(sidePanelController.view)
         addChildViewController(sidePanelController)
         sidePanelController.didMove(toParentViewController: self)
     }

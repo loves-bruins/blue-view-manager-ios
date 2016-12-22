@@ -1,39 +1,31 @@
 //
-//  ServicesPerUserViewController.swift
+//  WaterChangeServiceViewController.swift
 //  BlueViewManager
 //
-//  Created by Loren Rogers on 12/14/16.
+//  Created by Loren Rogers on 12/21/16.
 //  Copyright © 2016 Loren Rogers. All rights reserved.
 //
 
 import UIKit
 
-@objc
-protocol ServicesPerUserViewControllerDelegate {
-    @objc optional func toggleRightPanel()
-    @objc optional func collapseSidePanels()
-}
+class WaterChangeServiceViewController: UIViewController {
 
-class ServicesPerUserViewController: UITabBarController {
-    @IBOutlet weak var tableView: UITableView!
-
-    var titles = [String]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addService))
-        titles.append("Service this one")
-        titles.append("Why won't you work?")
-        titles.append("I've come to service you maam")
+        
+        self.tabBarController?.navigationItem.title = "Water Change"
+        let logButton = UIBarButtonItem(title: "Add", style: .plain, target: self, action: Selector(""))
+        
+        self.tabBarController?.navigationItem.rightBarButtonItem = logButton
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-        
+    
     /*
     // MARK: - Navigation
 
