@@ -113,8 +113,9 @@ extension WaterChangeServiceViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "water_change_cell")
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "water_change_cell", for: indexPath) as! WaterChangeCell
+        cell.configureForService(services[indexPath.row])
+        return cell
     }
     
 }
@@ -127,7 +128,7 @@ extension WaterChangeServiceViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 55
+        return 210
     }
 }
 
@@ -139,4 +140,23 @@ extension Date {
     init(milliseconds:Int) {
         self = Date(timeIntervalSince1970: TimeInterval(milliseconds / 1000))
     }
+}
+
+class WaterChangeCell: UITableViewCell {
+    @IBOutlet weak var notes: UILabel!
+    @IBOutlet weak var price: UILabel!
+    
+    @IBOutlet weak var date: UILabel!
+    func configureForService(_ service: Service) {
+        price.text = String(service.price)
+        notes.text = service.notes
+        let theDate = Date(timeIntervalSince1970: TimeInterval(service.date / 1000))
+        let dateFormatter = DateFormatter.init()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .medium
+
+        date.text = dateFormatter.string(from: theDate)
+        
+    }
+    
 }
