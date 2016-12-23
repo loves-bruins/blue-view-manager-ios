@@ -15,7 +15,7 @@ class AlgaeScrapeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.tabBarController?.navigationItem.title = "Algae Scrape"
-        let addButton = UIBarButtonItem(title: "Add", style: .plain, target: self, action: Selector(""))
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addAlgaeScrape))
         
         self.tabBarController?.navigationItem.rightBarButtonItem = addButton
     }
@@ -25,7 +25,10 @@ class AlgaeScrapeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func addAlgaeScrape() {
+        
+    }
+    
     /*
     // MARK: - Navigation
 

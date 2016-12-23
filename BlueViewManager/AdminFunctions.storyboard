@@ -296,7 +296,7 @@
         <!--Algae Scrape-->
         <scene sceneID="k8b-Tr-aGo">
             <objects>
-                <viewController title="Algae Scrape" id="lTk-Us-EVf" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AlgaeScrapeViewController" title="Algae Scrape" id="lTk-Us-EVf" customClass="AlgaeScrapeViewController" customModule="BlueViewManager" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pVg-8I-Mdb"/>
                         <viewControllerLayoutGuide type="bottom" id="wIE-VK-K5N"/>
@@ -306,7 +306,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="7rk-dP-7zA"/>
+                    <tabBarItem key="tabBarItem" title="algae scrape" image="algae_scrape" id="7rk-dP-7zA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gui-e7-1og" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -323,13 +323,133 @@
                     <view key="view" contentMode="scaleToFill" id="EAn-77-b5V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m00-25-hgo">
+                                <frame key="frameInset" minY="28" width="375" height="590"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="water_change_cell" id="VQh-w3-hgC">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VQh-w3-hgC" id="IF8-vc-y7k">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="oxs-Hi-aKb" id="Z3S-Rw-pkZ"/>
+                                    <outlet property="delegate" destination="oxs-Hi-aKb" id="10h-kf-tyg"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="s3R-n3-caX"/>
+                    <tabBarItem key="tabBarItem" title="water change" image="water_change" id="s3R-n3-caX"/>
+                    <connections>
+                        <outlet property="tableView" destination="m00-25-hgo" id="iS3-mj-wIL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hXC-Ll-wdG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2326" y="1591"/>
+            <point key="canvasLocation" x="2325.5999999999999" y="1590.8545727136434"/>
+        </scene>
+        <!--Add Service Table View Controller-->
+        <scene sceneID="R3U-E7-ldb">
+            <objects>
+                <tableViewController id="hG0-JV-xyG" customClass="AddServiceTableViewController" customModule="BlueViewManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="110" sectionHeaderHeight="18" sectionFooterHeight="18" id="Sll-ag-Rpt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Date" id="NaN-1G-cng">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="110" id="ruZ-t1-jBn">
+                                        <rect key="frame" x="0.0" y="56" width="375" height="110"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ruZ-t1-jBn" id="8uD-Gc-Z98">
+                                            <frame key="frameInset" width="375" height="109"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="RuC-GR-ml2">
+                                                    <frame key="frameInset" minY="-87" height="216"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                    <date key="date" timeIntervalSinceReferenceDate="504134782.14709598">
+                                                        <!--2016-12-22 21:26:22 +0000-->
+                                                    </date>
+                                                </datePicker>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Price" id="9x8-GP-d4n">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="GG2-75-bjF">
+                                        <rect key="frame" x="0.0" y="223" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GG2-75-bjF" id="85j-a8-piX">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fQd-dh-ZFi">
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="fQd-dh-ZFi" secondAttribute="bottom" id="B18-V3-Egj"/>
+                                                <constraint firstItem="fQd-dh-ZFi" firstAttribute="leading" secondItem="85j-a8-piX" secondAttribute="leading" constant="8" id="JxA-O8-bCF"/>
+                                                <constraint firstAttribute="trailing" secondItem="fQd-dh-ZFi" secondAttribute="trailing" constant="8" id="vDb-eN-pGg"/>
+                                                <constraint firstItem="fQd-dh-ZFi" firstAttribute="top" secondItem="85j-a8-piX" secondAttribute="top" id="z8k-n3-j64"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Notes" id="VDj-FP-kf9">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="LDz-Lv-TR1">
+                                        <rect key="frame" x="0.0" y="324" width="375" height="110"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LDz-Lv-TR1" id="LKr-2h-sMN">
+                                            <frame key="frameInset" width="375" height="109"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Hj-hG-dOJ">
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="9Hj-hG-dOJ" firstAttribute="leading" secondItem="LKr-2h-sMN" secondAttribute="leading" constant="8" id="2o1-Qt-K4J"/>
+                                                <constraint firstAttribute="bottom" secondItem="9Hj-hG-dOJ" secondAttribute="bottom" id="EGp-5b-jsj"/>
+                                                <constraint firstItem="9Hj-hG-dOJ" firstAttribute="top" secondItem="LKr-2h-sMN" secondAttribute="top" id="fD9-fQ-eeG"/>
+                                                <constraint firstAttribute="trailing" secondItem="9Hj-hG-dOJ" secondAttribute="trailing" constant="8" id="usL-sf-TfA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="hG0-JV-xyG" id="ENr-Hy-Iam"/>
+                            <outlet property="delegate" destination="hG0-JV-xyG" id="DLS-sg-vlP"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="date" destination="RuC-GR-ml2" id="3dh-hi-hRM"/>
+                        <outlet property="notes" destination="9Hj-hG-dOJ" id="3iE-4D-xWm"/>
+                        <outlet property="price" destination="fQd-dh-ZFi" id="sWg-wo-3OO"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HHq-QT-hvo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3269.5999999999999" y="1819.3403298350827"/>
         </scene>
         <!--Services Per User View Controller-->
         <scene sceneID="8cV-a6-6TS">
@@ -415,4 +535,8 @@
             <point key="canvasLocation" x="7749.6000000000004" y="1915.5922038980511"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="algae_scrape" width="29" height="29"/>
+        <image name="water_change" width="29" height="29"/>
+    </resources>
 </document>
