@@ -19,6 +19,9 @@ class WaterChangeServiceViewController: UIViewController {
     var ref: FIRDatabaseReference!
     // [END define_database_reference]
 
+    @IBAction func onAddService(segue: UIStoryboardSegue) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -63,6 +66,8 @@ class WaterChangeServiceViewController: UIViewController {
     }
     
     func addWaterChange() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "AddServiceTableViewController") as! AddServiceTableViewController
+        self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
 //        let dateInMilliseconds = Date().millisecondsSince1970
 //        let keys = ["date" : NSNumber(value:dateInMilliseconds),
 //                    "price" : NSNumber(value:24.00),
@@ -128,7 +133,7 @@ extension WaterChangeServiceViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 210
+        return 225
     }
 }
 
@@ -143,10 +148,11 @@ extension Date {
 }
 
 class WaterChangeCell: UITableViewCell {
+
     @IBOutlet weak var notes: UILabel!
     @IBOutlet weak var price: UILabel!
-    
     @IBOutlet weak var date: UILabel!
+
     func configureForService(_ service: Service) {
         price.text = String(service.price)
         notes.text = service.notes
@@ -156,7 +162,5 @@ class WaterChangeCell: UITableViewCell {
         dateFormatter.timeStyle = .medium
 
         date.text = dateFormatter.string(from: theDate)
-        
     }
-    
 }

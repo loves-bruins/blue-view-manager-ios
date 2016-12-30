@@ -14,6 +14,7 @@ class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
     var ref: FIRDatabaseReference!
+    var role = String()
     
     @IBAction func signOut(_ sender: AnyObject) {
         do {
@@ -52,9 +53,9 @@ class MasterViewController: UITableViewController {
                 
                 let changeRequest = user.profileChangeRequest()
                 let username = user.email
-                var role = "user"
+                self.role = "user"
                 if(username == "blueviewaquatics@gmail.com") {
-                    role = "admin"
+                    self.role = "admin"
                 }
                 changeRequest.displayName = username
                 
@@ -68,9 +69,11 @@ class MasterViewController: UITableViewController {
                     
                     // [START basic_write]
                     let usernameBridged = NSString(string:username!)
-                    let roleBridged = NSString(string:role)
+                    let roleBridged = NSString(string: self.role)
                     self.ref.child("users").child(user.uid).setValue(["userName": usernameBridged, "role" : roleBridged])
                     // [END basic_write]
+                    
+                    self.tableView.reloadData()
                 }
             }
             
@@ -88,15 +91,46 @@ class MasterViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        if(role == "admin") {
+            return 1
+        }
+        else if(role == "user") {
+            return 3
+        }
+        else {
+            return 0
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if role == "admin" {
+            return 1;
+        }
+        else {
+            if(section == 0) {
+                return 0
+            }
+            else if section == 1{
+                return 4
+            }
+            else {
+                return 2
+            }
+        }
+    }
+
     // MARK: - Segues
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                if(indexPath.row == 0) {
-                    let controller = (segue.destination as! UINavigationController).topViewController as! UserHistoryTableViewController
-                    controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
-                    controller.navigationItem.leftItemsSupplementBackButton = true
+                if indexPath.section == 1 {
+                    if(indexPath.row == 0) {
+                        let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
+                        controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
+                        controller.navigationItem.leftItemsSupplementBackButton = true
+                    }
                 }
             }
         }
