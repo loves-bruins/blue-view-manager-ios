@@ -15,6 +15,7 @@ class MasterViewController: UITableViewController {
     var detailViewController: DetailViewController? = nil
     var ref: FIRDatabaseReference!
     var role = String()
+    var userId: String!
     
     @IBAction func signOut(_ sender: AnyObject) {
         do {
@@ -53,6 +54,7 @@ class MasterViewController: UITableViewController {
                 
                 let changeRequest = user.profileChangeRequest()
                 let username = user.email
+                self.userId = user.uid
                 self.role = "user"
                 if(username == "blueviewaquatics@gmail.com") {
                     self.role = "admin"
@@ -119,20 +121,19 @@ class MasterViewController: UITableViewController {
             }
         }
     }
-
+    
     // MARK: - Segues
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetail" {
-            if let indexPath = self.tableView.indexPathForSelectedRow {
-                if indexPath.section == 1 {
-                    if(indexPath.row == 0) {
-                        let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
-                        controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
-                        controller.navigationItem.leftItemsSupplementBackButton = true
-                    }
-                }
-            }
+        if segue.identifier == "showEntireHistory" {
+            let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
+            controller.userId = self.userId
+            controller.View = .services
+        }
+        else if segue.identifier == "showTests" {
+            let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
+            controller.userId = self.userId
+            controller.View = .cycleTests
         }
         else if segue.identifier == "adminShowAllUsers" {
             if let indexPath = self.tableView.indexPathForSelectedRow {

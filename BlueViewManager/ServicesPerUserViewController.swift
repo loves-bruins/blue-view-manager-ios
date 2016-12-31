@@ -18,6 +18,7 @@ class ServicesPerUserViewController: UITabBarController {
     @IBOutlet weak var tableView: UITableView!
 
     var titles = [String]()
+    var userId : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
