@@ -14,6 +14,8 @@ class AddServiceTableViewController: UITableViewController {
     @IBOutlet weak var date: UIDatePicker!
     @IBOutlet weak var price: UITextField!
     
+    var service_id : String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,9 +33,14 @@ class AddServiceTableViewController: UITableViewController {
     }
 
     func newWaterChange() {
-        
+//        OperationQueue.main.addOperation {
+//            [weak self] in
+//            self?.performSegue(withIdentifier: "onAddService", sender: self)
+//        }
+        performSegue(withIdentifier: "onAddService", sender: self)
     }
-    /*
+    
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -41,6 +48,6 @@ class AddServiceTableViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }

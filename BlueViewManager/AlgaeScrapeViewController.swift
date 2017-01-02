@@ -9,6 +9,7 @@
 import UIKit
 
 class AlgaeScrapeViewController: UIViewController {
+    let service_id = "619d6018-7ff1-427d-9e2c-230512ac4760"
 
     override func viewDidLoad() {
         super.viewDidLoad()

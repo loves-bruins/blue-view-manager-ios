@@ -15,13 +15,12 @@ class WaterChangeServiceViewController: UIViewController {
 
     var userId : String!
     var services = [Service]()
+    let service_id = "0ef5b8bd-fabd-4d02-8f4c-b7362c2a6810"
+    
     // [START define_database_reference]
     var ref: FIRDatabaseReference!
     // [END define_database_reference]
 
-    @IBAction func onAddService(segue: UIStoryboardSegue) {
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,7 +34,6 @@ class WaterChangeServiceViewController: UIViewController {
         // [START create_database_reference]
         ref = FIRDatabase.database().reference()
         // [END create_database_reference]
-        userId = "F259TA3LR7OmFBmE8FnMCMpN3NA2"
         
         let newRef = ref?.child("user_services").child(userId).queryOrderedByKey()
         newRef?.observe(.value, with: { snapshot in
@@ -65,45 +63,21 @@ class WaterChangeServiceViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // Show the 'Add Service' screen
     func addWaterChange() {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "AddServiceTableViewController") as! AddServiceTableViewController
-        self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
-//        let dateInMilliseconds = Date().millisecondsSince1970
-//        let keys = ["date" : NSNumber(value:dateInMilliseconds),
-//                    "price" : NSNumber(value:24.00),
-//                    "service_id" : NSString(string:"0ef5b8bd-fabd-4d02-8f4c-b7362c2a6810"),
-//                    "uid" : NSString(string:self.userId),
-//                    "notes" : NSString(string:"Initial tank setup.  Added 75 gallons") ] as [String : Any]
-//        
-//        let newRef = ref?.child("user_services").child(userId!).child("water_change").queryOrderedByKey()
-//        let key = ref?.child("user_services").child(userId!).child("water_change").childByAutoId().key
-//        let userID = self.userId
-//        newRef?.observe(.value, with: { snapshot in
-//            print(snapshot.value)
-//            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
-//                for snap in snapshots {
-//                    if let dict = snap.value as? Dictionary<String, AnyObject> {
-//                        let service = Service()
-//                        service.setValuesForKeys(dict)
-//                        self.services.append(service)
-//                    }
-//                }
-//                let childUpdates = ["/water_change/\(key)/": keys]
-//                self.ref?.child("user_services").child(userID!).updateChildValues(childUpdates)
-//            }
-//        })
-//        
+        performSegue(withIdentifier: "showAddService", sender: self)
     }
     
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        let dest = segue.destination as! AddServiceTableViewController
+        dest.service_id = self.service_id
     }
-    */
+    
 
 }
 

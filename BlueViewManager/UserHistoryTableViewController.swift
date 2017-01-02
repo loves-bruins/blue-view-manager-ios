@@ -27,19 +27,16 @@ class UserHistoryTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if indexPath.row == 1 {
-//            let vc = storyboard?.instantiateViewController(withIdentifier: "ServicesPerUserViewController") as! ServicesPerUserViewController
-//            self.show(vc, sender:self)
-//        }
-    }
-    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showCycleTests" {
             let dest = segue.destination as! CycleTestsPerUserViewController
+            dest.userId = self.userId
+        }
+        else if segue.identifier == "showAllServices" {
+            let dest = segue.destination as! ServicesPerUserViewController
             dest.userId = self.userId
         }
     }

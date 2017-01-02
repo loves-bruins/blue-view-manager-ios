@@ -13,7 +13,6 @@ import FirebaseDatabaseUI
 class CycleTestsPerUserViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
 
-
     var userId : String!
     
     // [START define_database_reference]

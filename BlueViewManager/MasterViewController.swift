@@ -24,6 +24,9 @@ class MasterViewController: UITableViewController {
         catch let signOutError as NSError {
             print("Error signing out: %@", signOutError)
         }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        self.navigationController?.pushViewController(loginVC, animated: true)
     }
 
     override func viewDidLoad() {
@@ -143,7 +146,6 @@ class MasterViewController: UITableViewController {
                     controller.navigationItem.leftItemsSupplementBackButton = true
                 }
             }
-            
         }
     }
 }
