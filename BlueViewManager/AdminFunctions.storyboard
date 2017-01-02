@@ -304,9 +304,102 @@
                     <view key="view" contentMode="scaleToFill" id="g28-93-VK3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="224" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Eag-hf-2l0">
+                                <frame key="frameInset" minX="27" minY="38" width="320" height="590"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="algae_scrape_cell" rowHeight="225" id="Hua-i6-vy6" customClass="AlgaeScrapeCell" customModule="BlueViewManager" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="225"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hua-i6-vy6" id="jaY-5b-0Y7">
+                                            <frame key="frameInset" width="320" height="224"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VL7-1c-JFo">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="72" id="Uec-U9-3hE"/>
+                                                        <constraint firstAttribute="height" constant="21" id="iSk-x5-17s"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whF-Gr-aIt">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="jQE-DX-FTK"/>
+                                                        <constraint firstAttribute="width" constant="72" id="ko1-vP-X7P"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6LJ-Ac-jw5">
+                                                    <color key="backgroundColor" red="0.89019607840000003" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="148" id="NJL-Bk-DDK"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="ICm-ME-9UG">
+                                                    <color key="backgroundColor" red="0.89019607840000003" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="184" id="Av3-GB-Ae2"/>
+                                                        <constraint firstAttribute="height" constant="21" id="O0r-xh-Vil"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dej-md-5Ti">
+                                                    <color key="backgroundColor" red="0.89019607840000003" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="184" id="CGH-pf-PzM"/>
+                                                        <constraint firstAttribute="height" constant="21" id="jcK-NE-rJP"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="VL7-1c-JFo" firstAttribute="leading" secondItem="jaY-5b-0Y7" secondAttribute="leading" constant="8" id="5ay-zE-pjV"/>
+                                                <constraint firstItem="6LJ-Ac-jw5" firstAttribute="leading" secondItem="jaY-5b-0Y7" secondAttribute="leading" constant="8" id="9Hr-Ny-Z4U"/>
+                                                <constraint firstItem="dej-md-5Ti" firstAttribute="top" secondItem="ICm-ME-9UG" secondAttribute="bottom" constant="10" id="AST-Ps-5Yv"/>
+                                                <constraint firstItem="ICm-ME-9UG" firstAttribute="top" secondItem="jaY-5b-0Y7" secondAttribute="top" id="Cz6-Pq-Fe7"/>
+                                                <constraint firstItem="whF-Gr-aIt" firstAttribute="leading" secondItem="jaY-5b-0Y7" secondAttribute="leadingMargin" id="Pas-5d-sxv"/>
+                                                <constraint firstItem="6LJ-Ac-jw5" firstAttribute="top" secondItem="whF-Gr-aIt" secondAttribute="bottom" constant="10" id="T6L-W3-R0H"/>
+                                                <constraint firstAttribute="trailing" secondItem="ICm-ME-9UG" secondAttribute="trailing" constant="8" id="TU5-Qd-uQe"/>
+                                                <constraint firstItem="dej-md-5Ti" firstAttribute="leading" secondItem="ICm-ME-9UG" secondAttribute="leading" id="Xxx-Fg-eTI"/>
+                                                <constraint firstAttribute="trailing" secondItem="6LJ-Ac-jw5" secondAttribute="trailing" constant="8" id="dLY-s0-dyj"/>
+                                                <constraint firstItem="VL7-1c-JFo" firstAttribute="top" secondItem="jaY-5b-0Y7" secondAttribute="top" id="hPO-oA-iNx"/>
+                                                <constraint firstItem="whF-Gr-aIt" firstAttribute="top" secondItem="VL7-1c-JFo" secondAttribute="bottom" constant="10" id="z26-Bo-DkP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.83778782890000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="date" destination="ICm-ME-9UG" id="ICb-rY-uTX"/>
+                                            <outlet property="notes" destination="6LJ-Ac-jw5" id="65W-U3-W56"/>
+                                            <outlet property="price" destination="dej-md-5Ti" id="bBY-5p-XKB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="lTk-Us-EVf" id="uXe-JL-2KG"/>
+                                    <outlet property="delegate" destination="lTk-Us-EVf" id="aPX-23-bEh"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="algae scrape" image="algae_scrape" id="7rk-dP-7zA"/>
+                    <connections>
+                        <outlet property="tableView" destination="Eag-hf-2l0" id="IyJ-XY-gfe"/>
+                        <segue destination="hG0-JV-xyG" kind="show" identifier="showAddService" id="Epf-uL-Cyg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gui-e7-1og" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -545,4 +638,7 @@
         <image name="algae_scrape" width="29" height="29"/>
         <image name="water_change" width="29" height="29"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Epf-uL-Cyg"/>
+    </inferredMetricsTieBreakers>
 </document>

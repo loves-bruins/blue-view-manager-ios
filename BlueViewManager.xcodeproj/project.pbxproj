@@ -12,6 +12,8 @@
 		A303FF1E1E0C3DC100664982 /* AlgaeScrapeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A303FF1D1E0C3DC100664982 /* AlgaeScrapeViewController.swift */; };
 		A303FF201E0C7AE900664982 /* AddServiceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A303FF1F1E0C7AE900664982 /* AddServiceTableViewController.swift */; };
 		A303FF241E0DA8B800664982 /* UserFunctions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A303FF231E0DA8B800664982 /* UserFunctions.storyboard */; };
+		A303FF301E1A9AF200664982 /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A303FF2E1E1A9AF200664982 /* HockeySDK.framework */; };
+		A303FF311E1A9AF200664982 /* HockeySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A303FF2F1E1A9AF200664982 /* HockeySDKResources.bundle */; };
 		A304441F1DF34DA3009D9218 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A304441E1DF34DA3009D9218 /* Images.xcassets */; };
 		A30444211DF3644C009D9218 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30444201DF3644C009D9218 /* SignupViewController.swift */; };
 		A30444251DF5C900009D9218 /* MasterTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A30444241DF5C900009D9218 /* MasterTitleView.xib */; };
@@ -49,6 +51,8 @@
 		A303FF1D1E0C3DC100664982 /* AlgaeScrapeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgaeScrapeViewController.swift; sourceTree = "<group>"; };
 		A303FF1F1E0C7AE900664982 /* AddServiceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddServiceTableViewController.swift; sourceTree = "<group>"; };
 		A303FF231E0DA8B800664982 /* UserFunctions.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserFunctions.storyboard; sourceTree = "<group>"; };
+		A303FF2E1E1A9AF200664982 /* HockeySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HockeySDK.framework; sourceTree = "<group>"; };
+		A303FF2F1E1A9AF200664982 /* HockeySDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HockeySDKResources.bundle; sourceTree = "<group>"; };
 		A304441E1DF34DA3009D9218 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A30444201DF3644C009D9218 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		A30444241DF5C900009D9218 /* MasterTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MasterTitleView.xib; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A303FF301E1A9AF200664982 /* HockeySDK.framework in Frameworks */,
 				6B4C18BD8C8885068325DF77 /* Pods_BlueViewManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,6 +103,7 @@
 		0BD12C8505F3565DA2B7768D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A303FF2D1E1A9AF200664982 /* HockeySDK.embeddedframework */,
 				15828FAA907A005BF19D9BD1 /* Pods_BlueViewManager.framework */,
 			);
 			name = Frameworks;
@@ -117,6 +123,16 @@
 			children = (
 			);
 			name = "User Services";
+			sourceTree = "<group>";
+		};
+		A303FF2D1E1A9AF200664982 /* HockeySDK.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				A303FF2E1E1A9AF200664982 /* HockeySDK.framework */,
+				A303FF2F1E1A9AF200664982 /* HockeySDKResources.bundle */,
+			);
+			name = HockeySDK.embeddedframework;
+			path = "HockeySDK-iOS/HockeySDK.embeddedframework";
 			sourceTree = "<group>";
 		};
 		A30444281DF6298D009D9218 /* Model */ = {
@@ -233,6 +249,7 @@
 				A3C6A5261DF1C29E00C622D4 /* Resources */,
 				D9679843786939C027CE81FC /* [CP] Embed Pods Frameworks */,
 				49E5645DE4EE1F7D90EC54C9 /* [CP] Copy Pods Resources */,
+				A303FF2A1E1A970200664982 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -260,6 +277,9 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
 								enabled = 1;
 							};
 						};
@@ -296,6 +316,7 @@
 				A30444251DF5C900009D9218 /* MasterTitleView.xib in Resources */,
 				A3C6A5351DF1C29F00C622D4 /* Assets.xcassets in Resources */,
 				A3C6A5331DF1C29F00C622D4 /* Main.storyboard in Resources */,
+				A303FF311E1A9AF200664982 /* HockeySDKResources.bundle in Resources */,
 				A303FF241E0DA8B800664982 /* UserFunctions.storyboard in Resources */,
 				A3D0395F1DF8A31A00100887 /* CycleTestTableViewCell.xib in Resources */,
 				A3D039571DF7B98800100887 /* UserCell.xib in Resources */,
@@ -334,6 +355,19 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		A303FF2A1E1A970200664982 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FILE=\"${SRCROOT}/HockeySDK-iOS/BuildAgent\"\nif [ -f \"$FILE\" ]; then\n\"$FILE\"\nfi";
 		};
 		D9679843786939C027CE81FC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -424,7 +458,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: lrogersego@gmail.com (MVZDYAT8N5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -474,7 +509,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: lrogersego@gmail.com (MVZDYAT8N5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -503,7 +539,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = BlueViewManager/BlueViewManager.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = P672LX6B6Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HockeySDK-iOS/HockeySDK.embeddedframework",
+				);
 				INFOPLIST_FILE = BlueViewManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -522,7 +563,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = BlueViewManager/BlueViewManager.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = P672LX6B6Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HockeySDK-iOS/HockeySDK.embeddedframework",
+				);
 				INFOPLIST_FILE = BlueViewManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

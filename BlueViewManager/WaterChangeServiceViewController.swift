@@ -35,21 +35,28 @@ class WaterChangeServiceViewController: UIViewController {
         ref = FIRDatabase.database().reference()
         // [END create_database_reference]
         
-        let newRef = ref?.child("user_services").child(userId).queryOrderedByKey()
+        let newRef = ref?.child("user_services").child(userId).child(service_id).queryOrderedByKey()
         newRef?.observe(.value, with: { snapshot in
             print(snapshot.value)
             if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 for snap in snapshots {
                     if let dict = snap.value as? Dictionary<String, AnyObject> {
-                        for serviceValue in dict.values {
-                            
-                            var dateAsMlllis = Int64(0)
-                            if let val = serviceValue["date"] as? NSNumber {
-                                dateAsMlllis = val.int64Value // This is an `Int64`
-                            }
-                            let service = Service(service_id: "0ef5b8bd-fabd-4d02-8f4c-b7362c2a6810", uid: self.userId, title: "Water Change", price: serviceValue["price"] as! Double, date: dateAsMlllis, notes: serviceValue["notes"] as! String)
-                            self.services.append(service)
+//                        for serviceValue in dict.values {
+//                            
+//                            var dateAsMlllis = Int64(0)
+//                            if let val = serviceValue["date"] as? NSNumber {
+//                                dateAsMlllis = val.int64Value // This is an `Int64`
+//                            }
+//                            let service = Service(service_id: "0ef5b8bd-fabd-4d02-8f4c-b7362c2a6810", uid: self.userId, title: "Water Change", price: serviceValue["price"] as! Double, date: dateAsMlllis, notes: serviceValue["notes"] as! String)
+//                            self.services.append(service)
+//                        }
+                        var dateAsMlllis = Int64(0)
+                        if let val = dict["date"] as? NSNumber {
+                            dateAsMlllis = val.int64Value // This is an `Int64`
                         }
+                        let service = Service(service_id: "0ef5b8bd-fabd-4d02-8f4c-b7362c2a6810", uid: self.userId, title: "Water Change", price: dict["price"] as! Double, date: dateAsMlllis, notes: dict["notes"] as! String)
+                        self.services.append(service)
+
                     }
                 }
                 self.tableView.reloadData()
