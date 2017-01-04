@@ -56,9 +56,12 @@ class ServicesPerUserViewController: UITabBarController, UITabBarControllerDeleg
     @IBAction func onAddService(_ segue: UIStoryboardSegue) {
         let sourceVC = segue.source as! AddServiceTableViewController
         let dateInMilliseconds = sourceVC.date.date.millisecondsSince1970
-        let price = Double(sourceVC.price.text!)
+        var price : Double = 0.0
+        if !(sourceVC.price.text?.isEmpty)! {
+            price = Double(sourceVC.price.text!)!
+        }
         let keys = ["date" : NSNumber(value:dateInMilliseconds),
-                    "price" : NSNumber(value:price!),
+                    "price" : NSNumber(value:price),
                     "notes" : NSString(string:sourceVC.notes.text!) ] as [String : Any]
         
         var childNode = ""

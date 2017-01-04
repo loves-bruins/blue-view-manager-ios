@@ -24,16 +24,20 @@ class AlgaeScrapeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        self.tabBarController?.navigationItem.title = "Algae Scrape"
-        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addAlgaeScrape))
-        
-        self.tabBarController?.navigationItem.rightBarButtonItem = addButton
-        
         // [START create_database_reference]
         ref = FIRDatabase.database().reference()
         // [END create_database_reference]
         
+        tableView.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addAlgaeScrape))
+        
+        self.tabBarController?.navigationItem.rightBarButtonItem = addButton
+
+        self.tabBarController?.navigationItem.title = "Algae Scrape"
+
         let newRef = ref?.child("user_services").child(userId).child(service_id).queryOrderedByKey()
         newRef?.observe(.value, with: { snapshot in
             print(snapshot.value)
@@ -51,7 +55,6 @@ class AlgaeScrapeViewController: UIViewController {
                 self.tableView.reloadData()
             }
         })
-        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {

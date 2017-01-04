@@ -23,48 +23,41 @@ class WaterChangeServiceViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
-        self.tabBarController?.navigationItem.title = "Water Change"
-        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addWaterChange))
-        
-        self.tabBarController?.navigationItem.rightBarButtonItem = addButton
         
         // [START create_database_reference]
         ref = FIRDatabase.database().reference()
         // [END create_database_reference]
         
+        tableView.reloadData()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addWaterChange))
+        
+        self.tabBarController?.navigationItem.rightBarButtonItem = addButton
+
+        self.tabBarController?.navigationItem.title = "Water Change"
+
         let newRef = ref?.child("user_services").child(userId).child(service_id).queryOrderedByKey()
         newRef?.observe(.value, with: { snapshot in
             print(snapshot.value)
             if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 for snap in snapshots {
                     if let dict = snap.value as? Dictionary<String, AnyObject> {
-//                        for serviceValue in dict.values {
-//                            
-//                            var dateAsMlllis = Int64(0)
-//                            if let val = serviceValue["date"] as? NSNumber {
-//                                dateAsMlllis = val.int64Value // This is an `Int64`
-//                            }
-//                            let service = Service(service_id: "0ef5b8bd-fabd-4d02-8f4c-b7362c2a6810", uid: self.userId, title: "Water Change", price: serviceValue["price"] as! Double, date: dateAsMlllis, notes: serviceValue["notes"] as! String)
-//                            self.services.append(service)
-//                        }
                         var dateAsMlllis = Int64(0)
                         if let val = dict["date"] as? NSNumber {
                             dateAsMlllis = val.int64Value // This is an `Int64`
                         }
                         let service = Service(service_id: "0ef5b8bd-fabd-4d02-8f4c-b7362c2a6810", uid: self.userId, title: "Water Change", price: dict["price"] as! Double, date: dateAsMlllis, notes: dict["notes"] as! String)
                         self.services.append(service)
-
+                        
                     }
                 }
                 self.tableView.reloadData()
             }
         })
-        tableView.reloadData()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

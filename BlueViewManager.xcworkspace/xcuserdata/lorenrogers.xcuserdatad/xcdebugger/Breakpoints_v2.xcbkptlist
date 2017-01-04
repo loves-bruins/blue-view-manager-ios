@@ -89,8 +89,88 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+            filePath = "BlueViewManager/ServicesPerUserViewController.swift"
+            timestampString = "505241708.852199"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "onAddService(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BlueViewManager/ServicesPerUserViewController.swift"
+            timestampString = "505241708.852199"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "onAddService(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BlueViewManager/ServicesPerUserViewController.swift"
+            timestampString = "505241708.852199"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "onAddService(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BlueViewManager.ServicesPerUserViewController.onAddService (__ObjC.UIStoryboardSegue) -&gt; ()"
+                  moduleName = "BlueViewManager"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lorenrogers/Documents/devel/BlueViewManager/BlueViewManager/BlueViewManager/ServicesPerUserViewController.swift"
+                  timestampString = "505243952.310739"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "411">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BlueViewManager.ServicesPerUserViewController.onAddService (__ObjC.UIStoryboardSegue) -&gt; ()"
+                  moduleName = "BlueViewManager"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lorenrogers/Documents/devel/BlueViewManager/BlueViewManager/BlueViewManager/ServicesPerUserViewController.swift"
+                  timestampString = "505243952.312531"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "7310">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
             filePath = "BlueViewManager/AddServiceTableViewController.swift"
-            timestampString = "505012043.617186"
+            timestampString = "505241128.368974"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
