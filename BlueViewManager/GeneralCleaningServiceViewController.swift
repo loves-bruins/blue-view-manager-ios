@@ -1,21 +1,21 @@
 //
-//  AlgaeScrapeViewController.swift
+//  GeneralCleaningServiceViewController.swift
 //  BlueViewManager
 //
-//  Created by Loren Rogers on 12/22/16.
-//  Copyright © 2016 Loren Rogers. All rights reserved.
+//  Created by Loren Rogers on 1/4/17.
+//  Copyright © 2017 Loren Rogers. All rights reserved.
 //
 
 import UIKit
 import Firebase
 import FirebaseDatabaseUI
 
-class AlgaeScrapeViewController: UIViewController {
+class GeneralCleaningServiceViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
-    let service_id = "619d6018-7ff1-427d-9e2c-230512ac4760"
-    var services = [Service]()
     var userId : String!
+    var services = [Service]()
+    let service_id = "dcd0e180-13a1-4b01-ba56-4e7bbd4a07e5"
     
     // [START define_database_reference]
     var ref: FIRDatabaseReference!
@@ -23,7 +23,7 @@ class AlgaeScrapeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // [START create_database_reference]
         ref = FIRDatabase.database().reference()
         // [END create_database_reference]
@@ -32,12 +32,14 @@ class AlgaeScrapeViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addAlgaeScrape))
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addGeneralCleaning))
         
         self.tabBarController?.navigationItem.rightBarButtonItem = addButton
-
-        self.tabBarController?.navigationItem.title = "Algae Scrape"
-
+        
+        self.tabBarController?.navigationItem.title = "General Cleaning"
+        
+        services.removeAll()
+        
         let newRef = ref?.child("user_services").child(userId).child(service_id).queryOrderedByKey()
         newRef?.observe(.value, with: { snapshot in
             print(snapshot.value)
@@ -48,35 +50,40 @@ class AlgaeScrapeViewController: UIViewController {
                         if let val = dict["date"] as? NSNumber {
                             dateAsMlllis = val.int64Value // This is an `Int64`
                         }
-                        let service = Service(service_id: self.service_id, uid: self.userId, title: "Algae Scrape", price: dict["price"] as! Double, date: dateAsMlllis, notes: dict["notes"] as! String)
+                        let service = Service(service_id: self.service_id, uid: self.userId, title: "General Cleaning", price: dict["price"] as! Double, date: dateAsMlllis, notes: dict["notes"] as! String)
                         self.services.append(service)
+                        
                     }
                 }
                 self.tableView.reloadData()
             }
         })
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    func addAlgaeScrape() {
+    // Show the 'Add Service' screen
+    func addGeneralCleaning() {
         performSegue(withIdentifier: "showAddService", sender: self)
     }
     
-    
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
         let dest = segue.destination as! AddServiceTableViewController
         dest.service_id = self.service_id
     }
+    
+    
 }
 
-extension AlgaeScrapeViewController: UITableViewDataSource {
+extension GeneralCleaningServiceViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -87,7 +94,7 @@ extension AlgaeScrapeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "algae_scrape_cell", for: indexPath) as! AlgaeScrapeCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "general_cleaning_cell", for: indexPath) as! GeneralCleaningCell
         cell.configureForService(services[indexPath.row])
         return cell
     }
@@ -96,7 +103,7 @@ extension AlgaeScrapeViewController: UITableViewDataSource {
 
 // Mark: Table View Delegate
 
-extension AlgaeScrapeViewController: UITableViewDelegate {
+extension GeneralCleaningServiceViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
@@ -106,9 +113,10 @@ extension AlgaeScrapeViewController: UITableViewDelegate {
     }
 }
 
-class AlgaeScrapeCell: UITableViewCell {
+
+class GeneralCleaningCell: UITableViewCell {
     
-    @IBOutlet weak var notes: UILabel!
+    @IBOutlet weak var notes: VerticalTopAlignLabel!
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var date: UILabel!
     
@@ -123,4 +131,3 @@ class AlgaeScrapeCell: UITableViewCell {
         date.text = dateFormatter.string(from: theDate)
     }
 }
-

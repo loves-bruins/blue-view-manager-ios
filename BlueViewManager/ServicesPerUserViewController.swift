@@ -30,8 +30,8 @@ class ServicesPerUserViewController: UITabBarController, UITabBarControllerDeleg
                     let vc = viewController as! WaterChangeServiceViewController
                     vc.userId = self.userId
                 }
-                else if viewController is AlgaeScrapeViewController {
-                    let vc = viewController as! AlgaeScrapeViewController
+                else if viewController is AlgaeScrapeServiceViewController {
+                    let vc = viewController as! AlgaeScrapeServiceViewController
                     vc.userId = self.userId
                 }
             }

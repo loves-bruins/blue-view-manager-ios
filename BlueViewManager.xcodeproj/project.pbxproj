@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		6B4C18BD8C8885068325DF77 /* Pods_BlueViewManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15828FAA907A005BF19D9BD1 /* Pods_BlueViewManager.framework */; };
 		A303FF1C1E0B348200664982 /* WaterChangeServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A303FF1B1E0B348200664982 /* WaterChangeServiceViewController.swift */; };
-		A303FF1E1E0C3DC100664982 /* AlgaeScrapeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A303FF1D1E0C3DC100664982 /* AlgaeScrapeViewController.swift */; };
+		A303FF1E1E0C3DC100664982 /* AlgaeScrapeServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A303FF1D1E0C3DC100664982 /* AlgaeScrapeServiceViewController.swift */; };
 		A303FF201E0C7AE900664982 /* AddServiceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A303FF1F1E0C7AE900664982 /* AddServiceTableViewController.swift */; };
 		A303FF241E0DA8B800664982 /* UserFunctions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A303FF231E0DA8B800664982 /* UserFunctions.storyboard */; };
 		A303FF301E1A9AF200664982 /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A303FF2E1E1A9AF200664982 /* HockeySDK.framework */; };
@@ -41,6 +41,10 @@
 		A3D0395E1DF8A31A00100887 /* CycleTestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0395C1DF8A31A00100887 /* CycleTestTableViewCell.swift */; };
 		A3D0395F1DF8A31A00100887 /* CycleTestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3D0395D1DF8A31A00100887 /* CycleTestTableViewCell.xib */; };
 		A3D039611DF8BA5D00100887 /* CycleTestsPerUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D039601DF8BA5D00100887 /* CycleTestsPerUserViewController.swift */; };
+		A3D551A61E1DD58C006AB5BE /* VerticalTopAlignLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D551A51E1DD58C006AB5BE /* VerticalTopAlignLabel.swift */; };
+		A3D551A81E1DDB09006AB5BE /* GeneralCleaningServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D551A71E1DDB09006AB5BE /* GeneralCleaningServiceViewController.swift */; };
+		A3D551AA1E1DDB21006AB5BE /* SandSiphonServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D551A91E1DDB21006AB5BE /* SandSiphonServiceViewController.swift */; };
+		A3D551AD1E1DDBC9006AB5BE /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D551AC1E1DDBC9006AB5BE /* Date+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +52,7 @@
 		15828FAA907A005BF19D9BD1 /* Pods_BlueViewManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlueViewManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		935A3541D7D1D9594CB28C23 /* Pods-BlueViewManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueViewManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlueViewManager/Pods-BlueViewManager.debug.xcconfig"; sourceTree = "<group>"; };
 		A303FF1B1E0B348200664982 /* WaterChangeServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterChangeServiceViewController.swift; sourceTree = "<group>"; };
-		A303FF1D1E0C3DC100664982 /* AlgaeScrapeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgaeScrapeViewController.swift; sourceTree = "<group>"; };
+		A303FF1D1E0C3DC100664982 /* AlgaeScrapeServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgaeScrapeServiceViewController.swift; sourceTree = "<group>"; };
 		A303FF1F1E0C7AE900664982 /* AddServiceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddServiceTableViewController.swift; sourceTree = "<group>"; };
 		A303FF231E0DA8B800664982 /* UserFunctions.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserFunctions.storyboard; sourceTree = "<group>"; };
 		A303FF2E1E1A9AF200664982 /* HockeySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HockeySDK.framework; sourceTree = "<group>"; };
@@ -85,6 +89,10 @@
 		A3D0395C1DF8A31A00100887 /* CycleTestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleTestTableViewCell.swift; sourceTree = "<group>"; };
 		A3D0395D1DF8A31A00100887 /* CycleTestTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CycleTestTableViewCell.xib; sourceTree = "<group>"; };
 		A3D039601DF8BA5D00100887 /* CycleTestsPerUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleTestsPerUserViewController.swift; sourceTree = "<group>"; };
+		A3D551A51E1DD58C006AB5BE /* VerticalTopAlignLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalTopAlignLabel.swift; sourceTree = "<group>"; };
+		A3D551A71E1DDB09006AB5BE /* GeneralCleaningServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralCleaningServiceViewController.swift; sourceTree = "<group>"; };
+		A3D551A91E1DDB21006AB5BE /* SandSiphonServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SandSiphonServiceViewController.swift; sourceTree = "<group>"; };
+		A3D551AC1E1DDBC9006AB5BE /* Date+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,10 +157,12 @@
 		A38764E91E033C10005E3C3C /* Admin Services */ = {
 			isa = PBXGroup;
 			children = (
+				A303FF1F1E0C7AE900664982 /* AddServiceTableViewController.swift */,
+				A303FF1D1E0C3DC100664982 /* AlgaeScrapeServiceViewController.swift */,
+				A3D551A71E1DDB09006AB5BE /* GeneralCleaningServiceViewController.swift */,
+				A3D551A91E1DDB21006AB5BE /* SandSiphonServiceViewController.swift */,
 				A38764E51E01F660005E3C3C /* ServicesPerUserViewController.swift */,
 				A303FF1B1E0B348200664982 /* WaterChangeServiceViewController.swift */,
-				A303FF1D1E0C3DC100664982 /* AlgaeScrapeViewController.swift */,
-				A303FF1F1E0C7AE900664982 /* AddServiceTableViewController.swift */,
 			);
 			name = "Admin Services";
 			sourceTree = "<group>";
@@ -195,11 +205,11 @@
 		A3C6A52A1DF1C29F00C622D4 /* BlueViewManager */ = {
 			isa = PBXGroup;
 			children = (
+				A3D551AB1E1DDB90006AB5BE /* Extensions */,
+				A3D551A41E1DD544006AB5BE /* Custom UI */,
 				A303FF251E0DA8DF00664982 /* User Services */,
 				A38764EA1E033C65005E3C3C /* Tests */,
 				A38764E91E033C10005E3C3C /* Admin Services */,
-				A3D039541DF7B27500100887 /* UserTableViewCell.swift */,
-				A3D0395C1DF8A31A00100887 /* CycleTestTableViewCell.swift */,
 				A3D039511DF7197300100887 /* UI */,
 				A30444281DF6298D009D9218 /* Model */,
 				A3C6A5441DF2020900C622D4 /* LoginViewController.swift */,
@@ -234,6 +244,24 @@
 				A303FF231E0DA8B800664982 /* UserFunctions.storyboard */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		A3D551A41E1DD544006AB5BE /* Custom UI */ = {
+			isa = PBXGroup;
+			children = (
+				A3D551A51E1DD58C006AB5BE /* VerticalTopAlignLabel.swift */,
+				A3D039541DF7B27500100887 /* UserTableViewCell.swift */,
+				A3D0395C1DF8A31A00100887 /* CycleTestTableViewCell.swift */,
+			);
+			name = "Custom UI";
+			sourceTree = "<group>";
+		};
+		A3D551AB1E1DDB90006AB5BE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A3D551AC1E1DDBC9006AB5BE /* Date+Extensions.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,6 +421,7 @@
 			files = (
 				A3A6EF461DF8E53200D98BED /* AddCycleTestTableViewController.swift in Sources */,
 				A3D039531DF7B18600100887 /* AllUsersViewController.swift in Sources */,
+				A3D551A61E1DD58C006AB5BE /* VerticalTopAlignLabel.swift in Sources */,
 				A30444211DF3644C009D9218 /* SignupViewController.swift in Sources */,
 				A3C6A5301DF1C29F00C622D4 /* DetailViewController.swift in Sources */,
 				A3D039591DF89BD600100887 /* CycleTest.swift in Sources */,
@@ -401,16 +430,19 @@
 				A303FF201E0C7AE900664982 /* AddServiceTableViewController.swift in Sources */,
 				A3D0395E1DF8A31A00100887 /* CycleTestTableViewCell.swift in Sources */,
 				A3C6A54F1DF226C400C622D4 /* UIViewController+Alerts.m in Sources */,
-				A303FF1E1E0C3DC100664982 /* AlgaeScrapeViewController.swift in Sources */,
+				A303FF1E1E0C3DC100664982 /* AlgaeScrapeServiceViewController.swift in Sources */,
 				A3C6A5451DF2020900C622D4 /* LoginViewController.swift in Sources */,
 				A304442A1DF629A7009D9218 /* User.swift in Sources */,
 				A38764E81E03066D005E3C3C /* UserHistoryTableViewController.swift in Sources */,
+				A3D551AA1E1DDB21006AB5BE /* SandSiphonServiceViewController.swift in Sources */,
 				A3C6A52E1DF1C29F00C622D4 /* MasterViewController.swift in Sources */,
 				A3D039611DF8BA5D00100887 /* CycleTestsPerUserViewController.swift in Sources */,
 				A38764E61E01F660005E3C3C /* ServicesPerUserViewController.swift in Sources */,
 				A304442E1DF62B7F009D9218 /* Service.swift in Sources */,
 				A30444271DF5CA58009D9218 /* MasterTitleView.swift in Sources */,
+				A3D551AD1E1DDBC9006AB5BE /* Date+Extensions.swift in Sources */,
 				A303FF1C1E0B348200664982 /* WaterChangeServiceViewController.swift in Sources */,
+				A3D551A81E1DDB09006AB5BE /* GeneralCleaningServiceViewController.swift in Sources */,
 				A3C6A52C1DF1C29F00C622D4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -33,10 +33,6 @@ class AddServiceTableViewController: UITableViewController {
     }
 
     func newWaterChange() {
-//        OperationQueue.main.addOperation {
-//            [weak self] in
-//            self?.performSegue(withIdentifier: "onAddService", sender: self)
-//        }
         performSegue(withIdentifier: "onAddService", sender: self)
     }
     

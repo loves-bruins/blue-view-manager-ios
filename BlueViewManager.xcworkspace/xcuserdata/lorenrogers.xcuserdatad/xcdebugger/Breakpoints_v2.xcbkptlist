@@ -134,49 +134,33 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "BlueViewManager.ServicesPerUserViewController.onAddService (__ObjC.UIStoryboardSegue) -&gt; ()"
+                  symbolName = "function signature specialization &lt;Arg[0] = Owned To Guaranteed&gt; of BlueViewManager.ServicesPerUserViewController.onAddService (__ObjC.UIStoryboardSegue) -&gt; ()"
                   moduleName = "BlueViewManager"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lorenrogers/Documents/devel/BlueViewManager/BlueViewManager/BlueViewManager/ServicesPerUserViewController.swift"
-                  timestampString = "505243952.310739"
+                  timestampString = "505274066.529384"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "60"
                   endingLineNumber = "60"
-                  offsetFromSymbolStart = "411">
+                  offsetFromSymbolStart = "339">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "BlueViewManager.ServicesPerUserViewController.onAddService (__ObjC.UIStoryboardSegue) -&gt; ()"
+                  symbolName = "function signature specialization &lt;Arg[0] = Owned To Guaranteed&gt; of BlueViewManager.ServicesPerUserViewController.onAddService (__ObjC.UIStoryboardSegue) -&gt; ()"
                   moduleName = "BlueViewManager"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lorenrogers/Documents/devel/BlueViewManager/BlueViewManager/BlueViewManager/ServicesPerUserViewController.swift"
-                  timestampString = "505243952.312531"
+                  timestampString = "505274066.531411"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "60"
                   endingLineNumber = "60"
-                  offsetFromSymbolStart = "7310">
+                  offsetFromSymbolStart = "3777">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BlueViewManager/AddServiceTableViewController.swift"
-            timestampString = "505241128.368974"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "newWaterChange()"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

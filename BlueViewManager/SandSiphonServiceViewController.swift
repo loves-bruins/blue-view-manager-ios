@@ -1,26 +1,26 @@
 //
-//  WaterChangeServiceViewController.swift
+//  SandSiphonServiceViewController.swift
 //  BlueViewManager
 //
-//  Created by Loren Rogers on 12/21/16.
-//  Copyright © 2016 Loren Rogers. All rights reserved.
+//  Created by Loren Rogers on 1/4/17.
+//  Copyright © 2017 Loren Rogers. All rights reserved.
 //
 
 import UIKit
 import Firebase
 import FirebaseDatabaseUI
 
-class WaterChangeServiceViewController: UIViewController {
+class SandSiphonServiceViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-
+    
     var userId : String!
     var services = [Service]()
-    let service_id = "0ef5b8bd-fabd-4d02-8f4c-b7362c2a6810"
+    let service_id = "dcd0e180-13a1-4b01-ba56-4e7bbd4a07e5"
     
     // [START define_database_reference]
     var ref: FIRDatabaseReference!
     // [END define_database_reference]
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,13 +30,13 @@ class WaterChangeServiceViewController: UIViewController {
         
         tableView.reloadData()
     }
-
+    
     override func viewDidAppear(_ animated: Bool) {
-        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addWaterChange))
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addSandSiphon))
         
         self.tabBarController?.navigationItem.rightBarButtonItem = addButton
-
-        self.tabBarController?.navigationItem.title = "Water Change"
+        
+        self.tabBarController?.navigationItem.title = "Sand Siphon"
         
         services.removeAll()
         
@@ -50,7 +50,7 @@ class WaterChangeServiceViewController: UIViewController {
                         if let val = dict["date"] as? NSNumber {
                             dateAsMlllis = val.int64Value // This is an `Int64`
                         }
-                        let service = Service(service_id: "0ef5b8bd-fabd-4d02-8f4c-b7362c2a6810", uid: self.userId, title: "Water Change", price: dict["price"] as! Double, date: dateAsMlllis, notes: dict["notes"] as! String)
+                        let service = Service(service_id: self.service_id, uid: self.userId, title: "Sand Siphon", price: dict["price"] as! Double, date: dateAsMlllis, notes: dict["notes"] as! String)
                         self.services.append(service)
                         
                     }
@@ -66,12 +66,12 @@ class WaterChangeServiceViewController: UIViewController {
     }
     
     // Show the 'Add Service' screen
-    func addWaterChange() {
+    func addSandSiphon() {
         performSegue(withIdentifier: "showAddService", sender: self)
     }
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
@@ -80,10 +80,10 @@ class WaterChangeServiceViewController: UIViewController {
         dest.service_id = self.service_id
     }
     
-
+    
 }
 
-extension WaterChangeServiceViewController: UITableViewDataSource {
+extension SandSiphonServiceViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -94,7 +94,7 @@ extension WaterChangeServiceViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "water_change_cell", for: indexPath) as! WaterChangeCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "sand_siphon_cell", for: indexPath) as! SandSiphonCell
         cell.configureForService(services[indexPath.row])
         return cell
     }
@@ -103,7 +103,7 @@ extension WaterChangeServiceViewController: UITableViewDataSource {
 
 // Mark: Table View Delegate
 
-extension WaterChangeServiceViewController: UITableViewDelegate {
+extension SandSiphonServiceViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
@@ -113,12 +113,13 @@ extension WaterChangeServiceViewController: UITableViewDelegate {
     }
 }
 
-class WaterChangeCell: UITableViewCell {
 
+class SandSiphonCell: UITableViewCell {
+    
     @IBOutlet weak var notes: VerticalTopAlignLabel!
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var date: UILabel!
-
+    
     func configureForService(_ service: Service) {
         price.text = String(service.price)
         notes.text = service.notes
@@ -126,8 +127,7 @@ class WaterChangeCell: UITableViewCell {
         let dateFormatter = DateFormatter.init()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .medium
-
+        
         date.text = dateFormatter.string(from: theDate)
     }
 }
-
